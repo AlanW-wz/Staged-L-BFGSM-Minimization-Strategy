@@ -1,0 +1,43 @@
+{
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "checks": {
+    "unchanged_source_files": 78,
+    "python_syntax_files": 24,
+    "directional_gradient_relative_errors": {
+      "ackley": 1.1256146015270474e-10,
+      "bent_cigar": 3.0366829434450056e-11,
+      "diagonal_rank_quadratic": 9.228923047034098e-10,
+      "discus": 1.1259449589818135e-10,
+      "dixon_price": 4.4565723970942706e-10,
+      "ellipsoidal": 9.501473181637558e-12,
+      "griewank": 7.680661662234911e-13,
+      "levy": 3.299077296942144e-10,
+      "levy_scaled": 1.5293421011730253e-10,
+      "levy_shifted": 3.2383132716687672e-12,
+      "perturbed_tridiagonal_quadratic": 2.9157050732142586e-10,
+      "quartic_chain": 1.5598981924058473e-10,
+      "rastrigin": 2.1339861813216968e-10,
+      "schwefel": 2.361814791223973e-08,
+      "tridiagonal_quadratic": 1.3407097654294375e-10,
+      "trig_chain": 7.213730144433058e-11,
+      "weakly_perturbed_quadratic": 4.6392970937770915e-11
+    },
+    "reference_A_runs": 144,
+    "reference_B_runs": 112,
+    "reference_C_runs": 264,
+    "published_curve_max_absolute_error": {
+      "time": 1.7763568394002505e-15,
+      "iter": 1.7763568394002505e-15
+    },
+    "table_3_runtime_gradient_convergence": "matches all 12 reported values to 3 decimals",
+    "original_figure_input_hashes": 50
+  },
+  "limitations": [
+    "Not a full high-dimensional rerun",
+    "Five-step probe in final prose differs from archived benchmark method",
+    "Table 3 memory utilization and pair acceptance provenance incomplete",
+    "GROMACS/PEDOT:PSS/SAXS replication inputs absent"
+  ]
+}

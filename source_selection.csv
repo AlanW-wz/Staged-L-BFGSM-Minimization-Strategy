@@ -1,0 +1,103 @@
+﻿source,included,reason
+generate_afm_figures_1_3.py,True,"Core, numerical experiment runner, or historical plot provenance"
+generate_focused_main_method_figures.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+generate_ncg_favorable_section.py,True,"Core, numerical experiment runner, or historical plot provenance"
+generate_selected_11_cached_figures.py,True,"Core, numerical experiment runner, or historical plot provenance"
+lbfgsm_algorithm.py,True,"Core, numerical experiment runner, or historical plot provenance"
+lbfgs_from_tex.py,True,"Core, numerical experiment runner, or historical plot provenance"
+make_advantage_focused_paper_section.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_average_log_convergence_report.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_average_log_convergence_report_final.py,True,"Core, numerical experiment runner, or historical plot provenance"
+make_average_metrics_paper_report.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_final_paper_experiment_report.py,True,"Core, numerical experiment runner, or historical plot provenance"
+make_final_paper_experiment_report_curves.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_focused_experiment_report.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_journal_experiment_section.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_lbfgsm_wolfe_sd_lbfgsm_c025_c10_report.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_omega_parameter_comparison.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_paper_style_numerical_section.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+make_word_experiment_report.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+ncg_els_strong_wolfe.py,True,"Core, numerical experiment runner, or historical plot provenance"
+plot_rosenbrock_surface.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+rebuild_raw_histories_from_summary.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025.py,True,"Core, numerical experiment runner, or historical plot provenance"
+run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025_c10.py,True,"Core, numerical experiment runner, or historical plot provenance"
+run_incremental_lbfgs_standard.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+run_incremental_sd_bfgs_standard.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+run_incremental_sd_lbfgs_standard.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+run_incremental_sd_ncg_lbfgsm_c025.py,True,"Core, numerical experiment runner, or historical plot provenance"
+run_incremental_sd_ncg_lbfgsm_c025_c10.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+run_incremental_sd_ncg_lbfgsm_c052.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+run_omega_c000_experiment.py,True,"Core, numerical experiment runner, or historical plot provenance"
+run_omega_levy_like_experiment.py,True,"Core, numerical experiment runner, or historical plot provenance"
+实验设计/build_report.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验设计/config.py,True,"Core, numerical experiment runner, or historical plot provenance"
+实验设计/hybrid_methods.py,True,"Core, numerical experiment runner, or historical plot provenance"
+实验设计/run_all.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验设计/run_experiments.py,True,"Core, numerical experiment runner, or historical plot provenance"
+实验设计/test_functions.py,True,"Core, numerical experiment runner, or historical plot provenance"
+实验/ackley_test/run_ackley_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_ackley.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_booth.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_goldstein_price.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_himmelblau.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_matyas.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_mccormick.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_rastrigin.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_sphere.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_styblinski_tang.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_three_hump_camel.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/bench_zakharov.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/compare_bench_common.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/export_comparison_tables.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_compare_ncg_lbfgsm/run_all_benchmarks.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_ackley.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_booth.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_goldstein_price.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_himmelblau.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_matyas.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_mccormick.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_rastrigin.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_sphere.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_styblinski_tang.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_three_hump_camel.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/bench_zakharov.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/export_result_tables.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/lbfgsm_bench_common.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgsm_armijo/run_all_benchmarks.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_ackley.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_booth.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_goldstein_price.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_himmelblau.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_matyas.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_mccormick.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_rastrigin.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_rosenbrock_lbfgsm_wolfe_path.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_sphere.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_styblinski_tang.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_three_hump_camel.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/bench_zakharov.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/export_result_tables.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/lbfgsm_bench_common.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_lbfgs_wolfe/run_all_benchmarks.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/benchmarks_ncg_wolfe/bench_rosenbrock_ncg_wolfe.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/Discus_test/run_discus_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/Ellipsoidal_test/run_ellipsoidal_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/FENE_test/run_fene_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/LJ_test/run_lj_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/LJ_test/run_lj_n64_iter2000.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rastrigin_test/run_rastrigin_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/Schwefel_test/run_schwefel_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/Survey_test/build_optimization_survey.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/wood_test/run_wood_all_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/comparison_experiment/run_comparison_experiments.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/lbfgsm_armijo/run_lbfgsm_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/lbfgsm_wolfe/run_lbfgsm_rosenbrock_wolfe.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/ncg_wolfe/run_ncg_rosenbrock_wolfe.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/SD_LBFGSM/run_sd_to_lbfgsm_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/SD_NCG/run_sd_to_ncg_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/SD_NCG_LBFGSM/run_sd_ncg_lbfgsm_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3
+实验/rosenbrock_test/SD_NCG_LBFGSM_attempt/run_sd_ncg_lbfgsm_strategy5_rosenbrock.py,False,Earlier or alternative experiment/report; not an entry point for final Sections 3.1.1-3.1.3

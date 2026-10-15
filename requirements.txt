@@ -1,0 +1,6 @@
+# Paper's numerical environment: Python 3.12.7
+numpy==1.26.4
+scipy==1.13.1
+# Plotting/data tools: versions used for the package checks
+pandas==2.2.2
+matplotlib==3.9.2

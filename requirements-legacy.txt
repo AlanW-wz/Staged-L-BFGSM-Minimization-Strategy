@@ -1,0 +1,3 @@
+-r requirements.txt
+# Only needed to import/run archived Word-report generators.
+python-docx==1.2.0

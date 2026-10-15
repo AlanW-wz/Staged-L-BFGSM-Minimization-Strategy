@@ -1,0 +1,12 @@
+{
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "smoke": false,
+  "experiment": "C",
+  "dimensions": [
+    10000
+  ],
+  "timing": "time.perf_counter wall-clock elapsed seconds; CPU time label retained in historical figures"
+}

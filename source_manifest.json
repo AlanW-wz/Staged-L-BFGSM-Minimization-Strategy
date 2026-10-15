@@ -1,0 +1,470 @@
+[
+  {
+    "source": "lbfgsm_algorithm.py",
+    "destination": "legacy/lbfgsm_algorithm.py",
+    "sha256": "0067dd1fd980b0121d5ad3a6cbfed02aa9ffd9633a26aacb00f5ce997709ebcf",
+    "bytes": 10365
+  },
+  {
+    "source": "ncg_els_strong_wolfe.py",
+    "destination": "legacy/ncg_els_strong_wolfe.py",
+    "sha256": "649b8074a53dbcb56cd812a682f94cebcb59d715ade19bec555f07eeb69cbbb7",
+    "bytes": 7167
+  },
+  {
+    "source": "lbfgs_from_tex.py",
+    "destination": "legacy/lbfgs_from_tex.py",
+    "sha256": "1d5578b6390dd5c9ab69099650a506f02002765e1ecc5ad1ee982aa7bd073c05",
+    "bytes": 5384
+  },
+  {
+    "source": "实验设计/config.py",
+    "destination": "legacy/实验设计/config.py",
+    "sha256": "81a1ab940179b835958810842c640720af2fcf3cb16afd1d6654b0a19636183e",
+    "bytes": 2263
+  },
+  {
+    "source": "实验设计/test_functions.py",
+    "destination": "legacy/实验设计/test_functions.py",
+    "sha256": "42247022bf4292ac548624ef87a0dc2d38c07c3b3bd9553b32b8f68d081dafac",
+    "bytes": 7541
+  },
+  {
+    "source": "实验设计/hybrid_methods.py",
+    "destination": "legacy/实验设计/hybrid_methods.py",
+    "sha256": "4c03cd9171929dcebd1b68e74a643891e7fa9aeb8236021189ccde37568760c1",
+    "bytes": 33950
+  },
+  {
+    "source": "实验设计/run_experiments.py",
+    "destination": "legacy/实验设计/run_experiments.py",
+    "sha256": "cee7ffe5fe0a539f28d4aa44766913f55844051529180400dd5018551a67b432",
+    "bytes": 6994
+  },
+  {
+    "source": "make_final_paper_experiment_report.py",
+    "destination": "legacy/make_final_paper_experiment_report.py",
+    "sha256": "640018561a098ab27dee0f7100ddea6e97606e450518a4aca010875ecbf3d723",
+    "bytes": 16503
+  },
+  {
+    "source": "make_average_log_convergence_report_final.py",
+    "destination": "legacy/make_average_log_convergence_report_final.py",
+    "sha256": "852748973d150e48654e5ae3754b9f1a97cf8222c0b7945558e51ce9fccfcb94",
+    "bytes": 29065
+  },
+  {
+    "source": "generate_ncg_favorable_section.py",
+    "destination": "legacy/generate_ncg_favorable_section.py",
+    "sha256": "357b7d0b62bb034359e8a52617761d86fca2491269e5b04e763d3a650c4132df",
+    "bytes": 15012
+  },
+  {
+    "source": "generate_selected_11_cached_figures.py",
+    "destination": "legacy/generate_selected_11_cached_figures.py",
+    "sha256": "66b57e01ce25cd80716272522ff3665594fd001cca97812dae361eafe27ab5a1",
+    "bytes": 7070
+  },
+  {
+    "source": "generate_afm_figures_1_3.py",
+    "destination": "legacy/generate_afm_figures_1_3.py",
+    "sha256": "0806a0960f66318fe2aee54987197435af88808787040dbd202df6b593f6a455",
+    "bytes": 17541
+  },
+  {
+    "source": "run_omega_levy_like_experiment.py",
+    "destination": "legacy/run_omega_levy_like_experiment.py",
+    "sha256": "c76de65d13cfcfd1a0baf2c1df47b4bc30b385c804b17ccb3e8b2606ee8d7b51",
+    "bytes": 8562
+  },
+  {
+    "source": "run_omega_c000_experiment.py",
+    "destination": "legacy/run_omega_c000_experiment.py",
+    "sha256": "51c7bb2f3ffda96eb3d9e1c7b63dd31f27f0313a52af74317f68224f4faece80",
+    "bytes": 5465
+  },
+  {
+    "source": "run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025.py",
+    "destination": "legacy/run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025.py",
+    "sha256": "15794da8c94182418913f6fc8cbf270bc3eb98383c05209aea126158f2adc3bb",
+    "bytes": 4894
+  },
+  {
+    "source": "run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025_c10.py",
+    "destination": "legacy/run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025_c10.py",
+    "sha256": "a74297b50745b6db13a352b195fa552d458c5f9ab71f9df158473f8af86b4f7f",
+    "bytes": 4903
+  },
+  {
+    "source": "run_incremental_sd_ncg_lbfgsm_c025.py",
+    "destination": "legacy/run_incremental_sd_ncg_lbfgsm_c025.py",
+    "sha256": "18292608a65c1944c2f6446a2ea8a57044fe6b068404a16191e058a201a58d85",
+    "bytes": 4773
+  },
+  {
+    "source": "实验报告输出/quasi_newton_family_results.csv",
+    "destination": "legacy/实验报告输出/quasi_newton_family_results.csv",
+    "sha256": "45c2672c0507c38d276cf4a011a4973e5a97fbbfab5643bbeb5dbf96aad036a8",
+    "bytes": 12498
+  },
+  {
+    "source": "实验报告输出/selected_testset_33/selected_testset_histories.json",
+    "destination": "legacy/实验报告输出/selected_testset_33/selected_testset_histories.json",
+    "sha256": "c7aa9009c512b9700d63b0a7daa1145afd3c931ea967b9237a30f3581780b66e",
+    "bytes": 338944
+  },
+  {
+    "source": "实验报告输出/selected_testset_33/selected_testset_summary.csv",
+    "destination": "legacy/实验报告输出/selected_testset_33/selected_testset_summary.csv",
+    "sha256": "14d8645c747fbac40e9cbcdd5ef056747b0eb85927bf8135c2d5878a2d45c187",
+    "bytes": 28061
+  },
+  {
+    "source": "实验设计/results/summary.csv",
+    "destination": "legacy/实验设计/results/summary.csv",
+    "sha256": "6270c6331b7b5e13cfccba3063c87c05ab886b0f87cf4b28e7522aa47beb0a28",
+    "bytes": 75411
+  },
+  {
+    "source": "实验报告输出/omega_c000/omega_c000_summary.csv",
+    "destination": "legacy/实验报告输出/omega_c000/omega_c000_summary.csv",
+    "sha256": "4bb0d3c65f655cb6f97b2d03406b1693d1c96cc5b33cc37f45b488cd056c66e4",
+    "bytes": 5240
+  },
+  {
+    "source": "实验报告输出/omega_c000/omega_c000_results.json",
+    "destination": "legacy/实验报告输出/omega_c000/omega_c000_results.json",
+    "sha256": "0dd273dcf1f59eacca38e546281e02d2ac687e4d8fa11de46722ef52d522e9f6",
+    "bytes": 379047
+  },
+  {
+    "source": "实验报告输出/omega_levy_like/omega_levy_like_summary.csv",
+    "destination": "legacy/实验报告输出/omega_levy_like/omega_levy_like_summary.csv",
+    "sha256": "5fba32e2238445ed6060fc89843f7f9a3bdfc979dac625d39e94359699bf5090",
+    "bytes": 21227
+  },
+  {
+    "source": "实验报告输出/omega_levy_like/omega_levy_like_results.json",
+    "destination": "legacy/实验报告输出/omega_levy_like/omega_levy_like_results.json",
+    "sha256": "d105c27d6f9bfc562088ba9ea08a57830a23c44e68d49c123fb2862544cd27cc",
+    "bytes": 378150
+  },
+  {
+    "source": "omega_mechanism_trace.csv",
+    "destination": "legacy/omega_mechanism_trace.csv",
+    "sha256": "3521ea6ec300d18c20c785f0064ddbee9aa880b85d8c69fc04af7ef31ed9d58f",
+    "bytes": 206124
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_10000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_10000/grad_histories.json",
+    "sha256": "d8ecf8df4ac5d6b52f45e4c70c77e4dc93d037a30a95efcea9fa4c62354cc8fc",
+    "bytes": 116142
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_10000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_10000/time_histories.json",
+    "sha256": "2c9ff1af4edb0a91a67de0e2ee0ea6ea3103ed884b4ed2d25bc38aea108b0f5b",
+    "bytes": 125423
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_50000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_50000/grad_histories.json",
+    "sha256": "ffc72875190bcce18faafc0c49267bad4f8ae909ef0d8a830d38e2c4b219b591",
+    "bytes": 59781
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_50000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_50000/time_histories.json",
+    "sha256": "6c47cfacaf51c86209e6f0cd1439a350509c73706bfc5ba461e70bab4f87ddcf",
+    "bytes": 61871
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_100000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_100000/grad_histories.json",
+    "sha256": "a6b5b16b3b32c7fb8717e8fe30d3fcca9400404061f045ee97a19f09af0a94d6",
+    "bytes": 38358
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_100000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_100000/time_histories.json",
+    "sha256": "130d473e157338d1ec10546c07c443f218a31241db8b47dc1e98acf486a7aa21",
+    "bytes": 39769
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_500000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_500000/grad_histories.json",
+    "sha256": "10c3e4a8359db6621ad8858bd2baf50b98f62c0aa097bc03fd061871f4877cd5",
+    "bytes": 31788
+  },
+  {
+    "source": "实验设计/results/raw/discus/dim_500000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/discus/dim_500000/time_histories.json",
+    "sha256": "8c0f6c6810580752a6f1f3c5aeed46594a1d291595c864ee9c84785f05907576",
+    "bytes": 31531
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_10000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_10000/grad_histories.json",
+    "sha256": "04ee9f9dea58c85d40800e9acc0ed353cd302412eea5ad9d73c255d0455f2d04",
+    "bytes": 117008
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_10000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_10000/time_histories.json",
+    "sha256": "133721a7545457a50b0d1dc007e198e55c1a87eee35b6059c2e38bb0847f24d9",
+    "bytes": 120180
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_50000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_50000/grad_histories.json",
+    "sha256": "be6e122ed40576bb6c809370229b492dd5fc85e58de43c039eae7e1a0332fab9",
+    "bytes": 58546
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_50000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_50000/time_histories.json",
+    "sha256": "566e2ac14ad1e3f0fd10cf6c4ac5ccf4bce857bc9d1ce36929db45f7ea50b8b1",
+    "bytes": 58903
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_100000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_100000/grad_histories.json",
+    "sha256": "58b6611916b3a71aa34da2dd7acb68b78203bc2f9a59d6d38e04e28e4dba1b87",
+    "bytes": 39448
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_100000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_100000/time_histories.json",
+    "sha256": "26e4151761c696e9cf2759211ad167551cdac87f96732f4de2d9569cde935fe5",
+    "bytes": 39303
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_500000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_500000/grad_histories.json",
+    "sha256": "0f89a5d5960340d3b27fc9fcb23fc4cbaac89c84cc7ba919a78d19862190c68e",
+    "bytes": 31326
+  },
+  {
+    "source": "实验设计/results/raw/ellipsoidal/dim_500000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/ellipsoidal/dim_500000/time_histories.json",
+    "sha256": "7ab52501a874914c9fc3555e5e1e93e322c29e4482e455a5ed619eb5adc752a0",
+    "bytes": 31553
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_10000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_10000/grad_histories.json",
+    "sha256": "6f33fdb4814bb4eaa86d86dd3dd57743ce6452092abeb66c15087b34b92bcd17",
+    "bytes": 39631
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_10000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_10000/time_histories.json",
+    "sha256": "bbe428cac96ca33e008e88fe27255322280c6fed28fcf3b2bb8cac69842ae463",
+    "bytes": 37959
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_50000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_50000/grad_histories.json",
+    "sha256": "38f61517ad7f6cdae78fa145e8579f787220562d093641f8fa7edf4c1bb550be",
+    "bytes": 24735
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_50000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_50000/time_histories.json",
+    "sha256": "2e47f1ee93a6d25fea4df4f5fa29accfd862cf9bbec5ba0b57726d2d2b436646",
+    "bytes": 22784
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_100000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_100000/grad_histories.json",
+    "sha256": "177822990701271a4ca9309cfca84c0f5ea4e169c7eb97840fae62ce27cfb634",
+    "bytes": 18754
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_100000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_100000/time_histories.json",
+    "sha256": "5cd672a9ef20fec7e84af59d5b4f91a998355654b15ffaf01ea99855c3032c43",
+    "bytes": 17427
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_500000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_500000/grad_histories.json",
+    "sha256": "069b42803df52d18285e76e280f9c29068409554fd0f73bc15baf8427f809e22",
+    "bytes": 16682
+  },
+  {
+    "source": "实验设计/results/raw/rastrigin/dim_500000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/rastrigin/dim_500000/time_histories.json",
+    "sha256": "be3529733ec4191d71e74f1c1ba449c8f7f2e83cf87416e938980325bef5d284",
+    "bytes": 15847
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_10000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_10000/grad_histories.json",
+    "sha256": "86c9e3b2b2b196d6ae65e74e51c3a3e7273fd2536433e33c50dc20b09c6f64c3",
+    "bytes": 14591
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_10000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_10000/time_histories.json",
+    "sha256": "0413d08dc1138fd1fb482c5438e510526200a8b2d4552e1fa46bbbc89de62779",
+    "bytes": 14578
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_50000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_50000/grad_histories.json",
+    "sha256": "8f7cb4951df963e6cb6bddc58d405b27f2706cf2e1f9fe786dc602c390614e9e",
+    "bytes": 14934
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_50000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_50000/time_histories.json",
+    "sha256": "32dd663378e3ce0e6ca7c63d2c43e18c481f8c15fe49857a4565adcec3cba6ed",
+    "bytes": 14513
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_100000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_100000/grad_histories.json",
+    "sha256": "91de950ae58aa3a5b17733560df889f219ff3491c38ba54281c7b76d55d671ac",
+    "bytes": 15327
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_100000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_100000/time_histories.json",
+    "sha256": "4f0b426dce367c3e13e78f8c9707c738840cb646bcf088535a5173ec5145ad54",
+    "bytes": 14534
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_500000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_500000/grad_histories.json",
+    "sha256": "a255b80927c9134692207bb800d1933db26f852db9caa8ad7b73f2f50d733d1e",
+    "bytes": 15589
+  },
+  {
+    "source": "实验设计/results/raw/schwefel/dim_500000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/schwefel/dim_500000/time_histories.json",
+    "sha256": "60e518950bffab57ff2831e2adc384b17304d1cc74cc2726bfa5161b0a949d1b",
+    "bytes": 14414
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_10000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_10000/grad_histories.json",
+    "sha256": "5a13a22c2098f7c09179a89039d42101073cfbc98cc8a15c9e67c92c3beedb4b",
+    "bytes": 105627
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_10000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_10000/time_histories.json",
+    "sha256": "fc6ba1e1b3e24b478815e2df73651a0fb37a50ff4ea55701b03e19f883bae597",
+    "bytes": 98375
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_50000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_50000/grad_histories.json",
+    "sha256": "03deecb8a9e192e8305c9ac71f5e51fe63621b4accf592372ece51fe1e2c4fe8",
+    "bytes": 51448
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_50000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_50000/time_histories.json",
+    "sha256": "bd7acb31aae54a85c4017bb2e6d02a28c29ccc9e284d0c8dc6a5705843423562",
+    "bytes": 47986
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_100000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_100000/grad_histories.json",
+    "sha256": "cee3f99c77b1c9f74b7e52b28ecbbe59b1e0c27ef288346c6cdbcb35856d7520",
+    "bytes": 34153
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_100000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_100000/time_histories.json",
+    "sha256": "8394113e27e29fa195cb323874f8eac5ce5a49f859ed12e0b32b3dd1ce270896",
+    "bytes": 31997
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_500000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_500000/grad_histories.json",
+    "sha256": "3ea8bdc3cd49ec3f88b74b056fb343f700be7cfd55a9b23f84b9df0156922574",
+    "bytes": 27141
+  },
+  {
+    "source": "实验设计/results/raw/griewank/dim_500000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/griewank/dim_500000/time_histories.json",
+    "sha256": "d69c21dbc4b47f345a651aa4105a7a8f0ebf26b9aa4ba89913ff36769d65d62a",
+    "bytes": 25253
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_10000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_10000/grad_histories.json",
+    "sha256": "e6bc10f9cc881d36ad51dbb8bf39a8bb8669071be83c42c35439e63ee80070ae",
+    "bytes": 87575
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_10000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_10000/time_histories.json",
+    "sha256": "ff7588a86fcc5a94bcc60895e1f4d1fcb32ff248af9df3b2914fd656efae7e12",
+    "bytes": 93655
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_50000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_50000/grad_histories.json",
+    "sha256": "f7fdead4ef59766664ac17e423c6b532eb6f379ad40a7e05c236dee488ddabe4",
+    "bytes": 44160
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_50000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_50000/time_histories.json",
+    "sha256": "bce7606f478886beea3f9b58c6345de6919a168905b0d83c4eb282697acdff9c",
+    "bytes": 46415
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_100000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_100000/grad_histories.json",
+    "sha256": "7087f539fb4b67d35dbd6ec92199fffdd25b53ebd53986f68a0642cabc463100",
+    "bytes": 31639
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_100000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_100000/time_histories.json",
+    "sha256": "849da9b1ebe684758c977e62cee72fc8ae1f40aaabea22eab4e1caba206cdf63",
+    "bytes": 32705
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_500000/grad_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_500000/grad_histories.json",
+    "sha256": "1c1c0806a6cab1176704261f4b2067c8913b1455e7d153c5d8597e3b8f4cf7b6",
+    "bytes": 25482
+  },
+  {
+    "source": "实验设计/results/raw/bent_cigar/dim_500000/time_histories.json",
+    "destination": "legacy/实验设计/results/raw/bent_cigar/dim_500000/time_histories.json",
+    "sha256": "6929d7b06f8213b2d63ee08b976f46a6b24f18c5ba250f2aeaad80b30a304e26",
+    "bytes": 25246
+  },
+  {
+    "source": "AFM_figures_1_3_redesign/Figure_1_plot_data.csv",
+    "destination": "reference/published_plot_data/Figure_1_plot_data.csv",
+    "sha256": "5994c871b0030e183aa514058f965cddf71ccb5506bb9f46c9eeb617bb076463",
+    "bytes": 820
+  },
+  {
+    "source": "AFM_figures_1_3_redesign/Figure_2_plot_data.csv",
+    "destination": "reference/published_plot_data/Figure_2_plot_data.csv",
+    "sha256": "7055f145e8cd233c6b5409772975b95c876dec168a4f4d945f90ab2089c83601",
+    "bytes": 240928
+  },
+  {
+    "source": "AFM_figures_1_3_redesign/Figure_3_plot_data.csv",
+    "destination": "reference/published_plot_data/Figure_3_plot_data.csv",
+    "sha256": "e42eb7cf61e1f524cf06d518baa6a17556d31c92a9d2de5510e9eb3d8f7f4cc1",
+    "bytes": 239059
+  },
+  {
+    "source": "AFM_figures_1_3_redesign/data_provenance.json",
+    "destination": "reference/published_plot_data/data_provenance.json",
+    "sha256": "9223e8a091cd986e62d6a00809e6a6a3b9b585b22bd8897aac1d7ce422e601d9",
+    "bytes": 10581
+  }
+]

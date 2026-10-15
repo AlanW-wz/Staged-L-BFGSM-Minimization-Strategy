@@ -1,0 +1,82 @@
+[
+  {
+    "problem": "ackley",
+    "dimension": 500,
+    "method": "DFP",
+    "old": 0.1082316088482759,
+    "new": 0.10823160884827596,
+    "match": true
+  },
+  {
+    "problem": "rastrigin",
+    "dimension": 100,
+    "method": "DFP",
+    "old": 3.892467965071672e-08,
+    "new": 3.8924679650716716e-08,
+    "match": true
+  },
+  {
+    "problem": "rastrigin",
+    "dimension": 100,
+    "method": "SR1",
+    "old": 2.144467516661574e-07,
+    "new": 2.144467516661574e-07,
+    "match": true
+  },
+  {
+    "problem": "rastrigin",
+    "dimension": 500,
+    "method": "SR1",
+    "old": 2.230864343396549e-07,
+    "new": 2.2308643433965484e-07,
+    "match": true
+  },
+  {
+    "problem": "rastrigin",
+    "dimension": 500,
+    "method": "BFGS",
+    "old": 0.007567639232165,
+    "new": 0.007567639232165008,
+    "match": true
+  },
+  {
+    "problem": "ellipsoidal",
+    "dimension": 100,
+    "method": "DFP",
+    "old": 1055.904873531015,
+    "new": 1055.904873531015,
+    "match": true
+  },
+  {
+    "problem": "ellipsoidal",
+    "dimension": 100,
+    "method": "BFGS",
+    "old": 2905.3058445208057,
+    "new": 2905.3058445208057,
+    "match": true
+  },
+  {
+    "problem": "bent_cigar",
+    "dimension": 100,
+    "method": "DFP",
+    "old": 1.3427874633710346e-10,
+    "new": 1.3427874633710346e-10,
+    "match": true
+  },
+  {
+    "problem": "bent_cigar",
+    "dimension": 100,
+    "method": "BFGS",
+    "old": 9.857828178044562e-07,
+    "new": 9.857828178044562e-07,
+    "match": true
+  },
+  {
+    "problem": "bent_cigar",
+    "dimension": 500,
+    "method": "DFP",
+    "old": 4.576871621409931e-07,
+    "new": 4.576871621409931e-07,
+    "match": true
+  }
+]

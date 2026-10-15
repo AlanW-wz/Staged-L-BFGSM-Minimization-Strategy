@@ -1,0 +1,117 @@
+{
+  "A": {
+    "runs": 144,
+    "finite_results": true,
+    "grad_norm_matching_rtol_1e5_atol_1e8": 134,
+    "iterations_equal": 139,
+    "convergence_flags_equal": 143,
+    "differences": [
+      {
+        "problem": "ackley",
+        "dimension": 500,
+        "method": "DFP",
+        "grad_norm_old": 0.1082316088482759,
+        "grad_norm_new": 0.1081857590561636,
+        "iterations_old": 80,
+        "iterations_new": 80
+      },
+      {
+        "problem": "rastrigin",
+        "dimension": 100,
+        "method": "DFP",
+        "grad_norm_old": 3.892467965071672e-08,
+        "grad_norm_new": 1.6498640230767365e-05,
+        "iterations_old": 48,
+        "iterations_new": 80
+      },
+      {
+        "problem": "rastrigin",
+        "dimension": 100,
+        "method": "SR1",
+        "grad_norm_old": 2.144467516661574e-07,
+        "grad_norm_new": 4.7160557734422943e-08,
+        "iterations_old": 26,
+        "iterations_new": 26
+      },
+      {
+        "problem": "rastrigin",
+        "dimension": 500,
+        "method": "SR1",
+        "grad_norm_old": 2.230864343396549e-07,
+        "grad_norm_new": 7.098781490455749e-07,
+        "iterations_old": 49,
+        "iterations_new": 50
+      },
+      {
+        "problem": "rastrigin",
+        "dimension": 500,
+        "method": "BFGS",
+        "grad_norm_old": 0.007567639232165,
+        "grad_norm_new": 0.007567404902908,
+        "iterations_old": 80,
+        "iterations_new": 80
+      },
+      {
+        "problem": "ellipsoidal",
+        "dimension": 100,
+        "method": "DFP",
+        "grad_norm_old": 1055.904873531015,
+        "grad_norm_new": 392.2848432094863,
+        "iterations_old": 80,
+        "iterations_new": 80
+      },
+      {
+        "problem": "ellipsoidal",
+        "dimension": 100,
+        "method": "BFGS",
+        "grad_norm_old": 2905.3058445208057,
+        "grad_norm_new": 3693.450613399872,
+        "iterations_old": 80,
+        "iterations_new": 80
+      },
+      {
+        "problem": "bent_cigar",
+        "dimension": 100,
+        "method": "DFP",
+        "grad_norm_old": 1.3427874633710346e-10,
+        "grad_norm_new": 5.402140558727165e-07,
+        "iterations_old": 6,
+        "iterations_new": 7
+      },
+      {
+        "problem": "bent_cigar",
+        "dimension": 100,
+        "method": "BFGS",
+        "grad_norm_old": 9.857828178044562e-07,
+        "grad_norm_new": 9.533279745650866e-07,
+        "iterations_old": 38,
+        "iterations_new": 37
+      },
+      {
+        "problem": "bent_cigar",
+        "dimension": 500,
+        "method": "DFP",
+        "grad_norm_old": 4.576871621409931e-07,
+        "grad_norm_new": 8.351837090040493e-07,
+        "iterations_old": 8,
+        "iterations_new": 9
+      }
+    ]
+  },
+  "B": {
+    "runs": 28,
+    "finite_results": true,
+    "grad_norm_matching_rtol_1e5_atol_1e8": 28,
+    "iterations_equal": 28,
+    "convergence_flags_equal": 28,
+    "differences": []
+  },
+  "C": {
+    "runs": 66,
+    "finite_results": true,
+    "grad_norm_matching_rtol_1e5_atol_1e8": 66,
+    "iterations_equal": 66,
+    "convergence_flags_equal": 66,
+    "differences": []
+  }
+}

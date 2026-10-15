@@ -1,0 +1,174 @@
+{
+  "statement": "Figures were regenerated from the original CSV/JSON histories. No observations were removed, replaced, smoothed, or rescaled beyond the logarithms and interpolation already used in the original scripts.",
+  "figure_1_aggregation": "Arithmetic mean within each dimension-method group.",
+  "figures_2_3_aggregation": "For every dimension and method, ln(gradient norm) was linearly interpolated onto a 160-point common log10 time/iteration grid and then averaged over the same eleven functions as the original figure script.",
+  "problems": [
+    "discus",
+    "ellipsoidal",
+    "rastrigin",
+    "schwefel",
+    "griewank",
+    "bent_cigar",
+    "tridiagonal_quadratic",
+    "perturbed_tridiagonal_quadratic",
+    "weakly_perturbed_quadratic",
+    "diagonal_rank_quadratic",
+    "quartic_chain"
+  ],
+  "dimensions_figures_2_3": [
+    10000,
+    50000,
+    100000,
+    500000
+  ],
+  "input_sha256": {
+    "实验报告输出\\quasi_newton_family_results.csv": "45c2672c0507c38d276cf4a011a4973e5a97fbbfab5643bbeb5dbf96aad036a8",
+    "实验报告输出\\selected_testset_33\\selected_testset_histories.json": "c7aa9009c512b9700d63b0a7daa1145afd3c931ea967b9237a30f3581780b66e",
+    "实验设计\\results\\raw\\bent_cigar\\dim_10000\\grad_histories.json": "e6bc10f9cc881d36ad51dbb8bf39a8bb8669071be83c42c35439e63ee80070ae",
+    "实验设计\\results\\raw\\bent_cigar\\dim_10000\\time_histories.json": "ff7588a86fcc5a94bcc60895e1f4d1fcb32ff248af9df3b2914fd656efae7e12",
+    "实验设计\\results\\raw\\bent_cigar\\dim_100000\\grad_histories.json": "7087f539fb4b67d35dbd6ec92199fffdd25b53ebd53986f68a0642cabc463100",
+    "实验设计\\results\\raw\\bent_cigar\\dim_100000\\time_histories.json": "849da9b1ebe684758c977e62cee72fc8ae1f40aaabea22eab4e1caba206cdf63",
+    "实验设计\\results\\raw\\bent_cigar\\dim_50000\\grad_histories.json": "f7fdead4ef59766664ac17e423c6b532eb6f379ad40a7e05c236dee488ddabe4",
+    "实验设计\\results\\raw\\bent_cigar\\dim_50000\\time_histories.json": "bce7606f478886beea3f9b58c6345de6919a168905b0d83c4eb282697acdff9c",
+    "实验设计\\results\\raw\\bent_cigar\\dim_500000\\grad_histories.json": "1c1c0806a6cab1176704261f4b2067c8913b1455e7d153c5d8597e3b8f4cf7b6",
+    "实验设计\\results\\raw\\bent_cigar\\dim_500000\\time_histories.json": "6929d7b06f8213b2d63ee08b976f46a6b24f18c5ba250f2aeaad80b30a304e26",
+    "实验设计\\results\\raw\\discus\\dim_10000\\grad_histories.json": "d8ecf8df4ac5d6b52f45e4c70c77e4dc93d037a30a95efcea9fa4c62354cc8fc",
+    "实验设计\\results\\raw\\discus\\dim_10000\\time_histories.json": "2c9ff1af4edb0a91a67de0e2ee0ea6ea3103ed884b4ed2d25bc38aea108b0f5b",
+    "实验设计\\results\\raw\\discus\\dim_100000\\grad_histories.json": "a6b5b16b3b32c7fb8717e8fe30d3fcca9400404061f045ee97a19f09af0a94d6",
+    "实验设计\\results\\raw\\discus\\dim_100000\\time_histories.json": "130d473e157338d1ec10546c07c443f218a31241db8b47dc1e98acf486a7aa21",
+    "实验设计\\results\\raw\\discus\\dim_50000\\grad_histories.json": "ffc72875190bcce18faafc0c49267bad4f8ae909ef0d8a830d38e2c4b219b591",
+    "实验设计\\results\\raw\\discus\\dim_50000\\time_histories.json": "6c47cfacaf51c86209e6f0cd1439a350509c73706bfc5ba461e70bab4f87ddcf",
+    "实验设计\\results\\raw\\discus\\dim_500000\\grad_histories.json": "10c3e4a8359db6621ad8858bd2baf50b98f62c0aa097bc03fd061871f4877cd5",
+    "实验设计\\results\\raw\\discus\\dim_500000\\time_histories.json": "8c0f6c6810580752a6f1f3c5aeed46594a1d291595c864ee9c84785f05907576",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_10000\\grad_histories.json": "04ee9f9dea58c85d40800e9acc0ed353cd302412eea5ad9d73c255d0455f2d04",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_10000\\time_histories.json": "133721a7545457a50b0d1dc007e198e55c1a87eee35b6059c2e38bb0847f24d9",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_100000\\grad_histories.json": "58b6611916b3a71aa34da2dd7acb68b78203bc2f9a59d6d38e04e28e4dba1b87",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_100000\\time_histories.json": "26e4151761c696e9cf2759211ad167551cdac87f96732f4de2d9569cde935fe5",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_50000\\grad_histories.json": "be6e122ed40576bb6c809370229b492dd5fc85e58de43c039eae7e1a0332fab9",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_50000\\time_histories.json": "566e2ac14ad1e3f0fd10cf6c4ac5ccf4bce857bc9d1ce36929db45f7ea50b8b1",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_500000\\grad_histories.json": "0f89a5d5960340d3b27fc9fcb23fc4cbaac89c84cc7ba919a78d19862190c68e",
+    "实验设计\\results\\raw\\ellipsoidal\\dim_500000\\time_histories.json": "7ab52501a874914c9fc3555e5e1e93e322c29e4482e455a5ed619eb5adc752a0",
+    "实验设计\\results\\raw\\griewank\\dim_10000\\grad_histories.json": "5a13a22c2098f7c09179a89039d42101073cfbc98cc8a15c9e67c92c3beedb4b",
+    "实验设计\\results\\raw\\griewank\\dim_10000\\time_histories.json": "fc6ba1e1b3e24b478815e2df73651a0fb37a50ff4ea55701b03e19f883bae597",
+    "实验设计\\results\\raw\\griewank\\dim_100000\\grad_histories.json": "cee3f99c77b1c9f74b7e52b28ecbbe59b1e0c27ef288346c6cdbcb35856d7520",
+    "实验设计\\results\\raw\\griewank\\dim_100000\\time_histories.json": "8394113e27e29fa195cb323874f8eac5ce5a49f859ed12e0b32b3dd1ce270896",
+    "实验设计\\results\\raw\\griewank\\dim_50000\\grad_histories.json": "03deecb8a9e192e8305c9ac71f5e51fe63621b4accf592372ece51fe1e2c4fe8",
+    "实验设计\\results\\raw\\griewank\\dim_50000\\time_histories.json": "bd7acb31aae54a85c4017bb2e6d02a28c29ccc9e284d0c8dc6a5705843423562",
+    "实验设计\\results\\raw\\griewank\\dim_500000\\grad_histories.json": "3ea8bdc3cd49ec3f88b74b056fb343f700be7cfd55a9b23f84b9df0156922574",
+    "实验设计\\results\\raw\\griewank\\dim_500000\\time_histories.json": "d69c21dbc4b47f345a651aa4105a7a8f0ebf26b9aa4ba89913ff36769d65d62a",
+    "实验设计\\results\\raw\\rastrigin\\dim_10000\\grad_histories.json": "6f33fdb4814bb4eaa86d86dd3dd57743ce6452092abeb66c15087b34b92bcd17",
+    "实验设计\\results\\raw\\rastrigin\\dim_10000\\time_histories.json": "bbe428cac96ca33e008e88fe27255322280c6fed28fcf3b2bb8cac69842ae463",
+    "实验设计\\results\\raw\\rastrigin\\dim_100000\\grad_histories.json": "177822990701271a4ca9309cfca84c0f5ea4e169c7eb97840fae62ce27cfb634",
+    "实验设计\\results\\raw\\rastrigin\\dim_100000\\time_histories.json": "5cd672a9ef20fec7e84af59d5b4f91a998355654b15ffaf01ea99855c3032c43",
+    "实验设计\\results\\raw\\rastrigin\\dim_50000\\grad_histories.json": "38f61517ad7f6cdae78fa145e8579f787220562d093641f8fa7edf4c1bb550be",
+    "实验设计\\results\\raw\\rastrigin\\dim_50000\\time_histories.json": "2e47f1ee93a6d25fea4df4f5fa29accfd862cf9bbec5ba0b57726d2d2b436646",
+    "实验设计\\results\\raw\\rastrigin\\dim_500000\\grad_histories.json": "069b42803df52d18285e76e280f9c29068409554fd0f73bc15baf8427f809e22",
+    "实验设计\\results\\raw\\rastrigin\\dim_500000\\time_histories.json": "be3529733ec4191d71e74f1c1ba449c8f7f2e83cf87416e938980325bef5d284",
+    "实验设计\\results\\raw\\schwefel\\dim_10000\\grad_histories.json": "86c9e3b2b2b196d6ae65e74e51c3a3e7273fd2536433e33c50dc20b09c6f64c3",
+    "实验设计\\results\\raw\\schwefel\\dim_10000\\time_histories.json": "0413d08dc1138fd1fb482c5438e510526200a8b2d4552e1fa46bbbc89de62779",
+    "实验设计\\results\\raw\\schwefel\\dim_100000\\grad_histories.json": "91de950ae58aa3a5b17733560df889f219ff3491c38ba54281c7b76d55d671ac",
+    "实验设计\\results\\raw\\schwefel\\dim_100000\\time_histories.json": "4f0b426dce367c3e13e78f8c9707c738840cb646bcf088535a5173ec5145ad54",
+    "实验设计\\results\\raw\\schwefel\\dim_50000\\grad_histories.json": "8f7cb4951df963e6cb6bddc58d405b27f2706cf2e1f9fe786dc602c390614e9e",
+    "实验设计\\results\\raw\\schwefel\\dim_50000\\time_histories.json": "32dd663378e3ce0e6ca7c63d2c43e18c481f8c15fe49857a4565adcec3cba6ed",
+    "实验设计\\results\\raw\\schwefel\\dim_500000\\grad_histories.json": "a255b80927c9134692207bb800d1933db26f852db9caa8ad7b73f2f50d733d1e",
+    "实验设计\\results\\raw\\schwefel\\dim_500000\\time_histories.json": "60e518950bffab57ff2831e2adc384b17304d1cc74cc2726bfa5161b0a949d1b"
+  },
+  "figure_1_aggregated_values": [
+    {
+      "dimension": 10,
+      "method": "BFGS",
+      "mean_cpu": 0.015889066666356144,
+      "mean_grad": 5.621288901384372e-07
+    },
+    {
+      "dimension": 10,
+      "method": "DFP",
+      "mean_cpu": 0.1296780111113346,
+      "mean_grad": 0.12112884350795393
+    },
+    {
+      "dimension": 10,
+      "method": "LBFGSM",
+      "mean_cpu": 0.055680722222708284,
+      "mean_grad": 2529.0071005797627
+    },
+    {
+      "dimension": 10,
+      "method": "SR1",
+      "mean_cpu": 0.008790155555339433,
+      "mean_grad": 3.8246422728717173e-07
+    },
+    {
+      "dimension": 50,
+      "method": "BFGS",
+      "mean_cpu": 0.017672311110699255,
+      "mean_grad": 0.4493792977052283
+    },
+    {
+      "dimension": 50,
+      "method": "DFP",
+      "mean_cpu": 0.025460766666937012,
+      "mean_grad": 3.011081184279686
+    },
+    {
+      "dimension": 50,
+      "method": "LBFGSM",
+      "mean_cpu": 0.043951744444762436,
+      "mean_grad": 2419.938713489275
+    },
+    {
+      "dimension": 50,
+      "method": "SR1",
+      "mean_cpu": 0.012643477777954866,
+      "mean_grad": 0.03830222473375312
+    },
+    {
+      "dimension": 100,
+      "method": "BFGS",
+      "mean_cpu": 0.040398811111572244,
+      "mean_grad": 325.5982538295902
+    },
+    {
+      "dimension": 100,
+      "method": "DFP",
+      "mean_cpu": 0.08496215555578597,
+      "mean_grad": 123.16207276834082
+    },
+    {
+      "dimension": 100,
+      "method": "LBFGSM",
+      "mean_cpu": 0.035267077777562966,
+      "mean_grad": 8344.452936394351
+    },
+    {
+      "dimension": 100,
+      "method": "SR1",
+      "mean_cpu": 0.025374877776635444,
+      "mean_grad": 3.162771500130539
+    },
+    {
+      "dimension": 500,
+      "method": "BFGS",
+      "mean_cpu": 0.6613799111111752,
+      "mean_grad": 503729.3910778998
+    },
+    {
+      "dimension": 500,
+      "method": "DFP",
+      "mean_cpu": 0.3851520444446679,
+      "mean_grad": 467738.97124201886
+    },
+    {
+      "dimension": 500,
+      "method": "LBFGSM",
+      "mean_cpu": 0.03384085555626364,
+      "mean_grad": 16932.327426435
+    },
+    {
+      "dimension": 500,
+      "method": "SR1",
+      "mean_cpu": 0.18497331111153567,
+      "mean_grad": 466683.40839261375
+    }
+  ]
+}
