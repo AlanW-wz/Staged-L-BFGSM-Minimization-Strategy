@@ -1,0 +1,481 @@
+{
+  "base_commit": "7e985ac26c06315a961b5e060597a254ebd76a55",
+  "scope": "Only this repository is modified. External quench_study remains read-only.",
+  "replaced_entrypoints": [
+    "reproduce.py",
+    "replot.py",
+    "verify.py"
+  ],
+  "deleted_files": [
+    {
+      "path": "AUDIT_zh.md",
+      "sha256_before": "870fccf3b2853e9747dc0e9cd3a71e1132362d52286cf2bab46da0ded62dec0c",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/generate_afm_figures_1_3.py",
+      "sha256_before": "32fb460012c349afbec6aab83ea9590c85811f68b6a53a7126c5a0dcaf03f179",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/generate_ncg_favorable_section.py",
+      "sha256_before": "feffbb92f6f2cb65fa3d85913f2214a00b6cb237dd616a3ae869787b1d98ff01",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/generate_selected_11_cached_figures.py",
+      "sha256_before": "7511133d807bd849dd15056691d5a2e49b7b1d90ce011edf68bdc54191f55a26",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/lbfgs_from_tex.py",
+      "sha256_before": "1d5578b6390dd5c9ab69099650a506f02002765e1ecc5ad1ee982aa7bd073c05",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/lbfgsm_algorithm.py",
+      "sha256_before": "0067dd1fd980b0121d5ad3a6cbfed02aa9ffd9633a26aacb00f5ce997709ebcf",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/make_average_log_convergence_report_final.py",
+      "sha256_before": "34da857b2e25069862b7aa299f45883f02f5a01ab4dba42743a45c9dd32537b5",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/make_final_paper_experiment_report.py",
+      "sha256_before": "3d384294c2310c246b6d3d598812d6ada27f9d60716f7a4aea7acd800f927bb4",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/ncg_els_strong_wolfe.py",
+      "sha256_before": "649b8074a53dbcb56cd812a682f94cebcb59d715ade19bec555f07eeb69cbbb7",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/omega_mechanism_trace.csv",
+      "sha256_before": "3521ea6ec300d18c20c785f0064ddbee9aa880b85d8c69fc04af7ef31ed9d58f",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025.py",
+      "sha256_before": "cf8b8aa0e96ae514096e30e11397b1bf7f0e82291eeb0f370b347a6af16c69c2",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/run_incremental_lbfgsm_wolfe_sd_lbfgsm_c025_c10.py",
+      "sha256_before": "8a7733269c14d64c2eab8f6a136bf685f469312a46a4f464d12b22ad4302d0ca",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/run_incremental_sd_ncg_lbfgsm_c025.py",
+      "sha256_before": "4187699275546bef8b56dedbadb50f119be7331d59e9e46aae944cbd08d7ece9",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/run_omega_c000_experiment.py",
+      "sha256_before": "a68b5e2b7410cc5ca45d63543dbd8c7122d72c898f3abe017e5ab0c1996228df",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/run_omega_levy_like_experiment.py",
+      "sha256_before": "3c768afb67392378fa473cdd9fa48fb4b82831f675d826b2c6f1aee32231cd85",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验报告输出/omega_c000/omega_c000_results.json",
+      "sha256_before": "0dd273dcf1f59eacca38e546281e02d2ac687e4d8fa11de46722ef52d522e9f6",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验报告输出/omega_c000/omega_c000_summary.csv",
+      "sha256_before": "4bb0d3c65f655cb6f97b2d03406b1693d1c96cc5b33cc37f45b488cd056c66e4",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验报告输出/omega_levy_like/omega_levy_like_results.json",
+      "sha256_before": "d105c27d6f9bfc562088ba9ea08a57830a23c44e68d49c123fb2862544cd27cc",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验报告输出/omega_levy_like/omega_levy_like_summary.csv",
+      "sha256_before": "5fba32e2238445ed6060fc89843f7f9a3bdfc979dac625d39e94359699bf5090",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验报告输出/quasi_newton_family_results.csv",
+      "sha256_before": "45c2672c0507c38d276cf4a011a4973e5a97fbbfab5643bbeb5dbf96aad036a8",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验报告输出/selected_testset_33/selected_testset_histories.json",
+      "sha256_before": "c7aa9009c512b9700d63b0a7daa1145afd3c931ea967b9237a30f3581780b66e",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验报告输出/selected_testset_33/selected_testset_summary.csv",
+      "sha256_before": "14d8645c747fbac40e9cbcdd5ef056747b0eb85927bf8135c2d5878a2d45c187",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/config.py",
+      "sha256_before": "81a1ab940179b835958810842c640720af2fcf3cb16afd1d6654b0a19636183e",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/hybrid_methods.py",
+      "sha256_before": "4c03cd9171929dcebd1b68e74a643891e7fa9aeb8236021189ccde37568760c1",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_10000/grad_histories.json",
+      "sha256_before": "e6bc10f9cc881d36ad51dbb8bf39a8bb8669071be83c42c35439e63ee80070ae",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_10000/time_histories.json",
+      "sha256_before": "ff7588a86fcc5a94bcc60895e1f4d1fcb32ff248af9df3b2914fd656efae7e12",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_100000/grad_histories.json",
+      "sha256_before": "7087f539fb4b67d35dbd6ec92199fffdd25b53ebd53986f68a0642cabc463100",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_100000/time_histories.json",
+      "sha256_before": "849da9b1ebe684758c977e62cee72fc8ae1f40aaabea22eab4e1caba206cdf63",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_50000/grad_histories.json",
+      "sha256_before": "f7fdead4ef59766664ac17e423c6b532eb6f379ad40a7e05c236dee488ddabe4",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_50000/time_histories.json",
+      "sha256_before": "bce7606f478886beea3f9b58c6345de6919a168905b0d83c4eb282697acdff9c",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_500000/grad_histories.json",
+      "sha256_before": "1c1c0806a6cab1176704261f4b2067c8913b1455e7d153c5d8597e3b8f4cf7b6",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/bent_cigar/dim_500000/time_histories.json",
+      "sha256_before": "6929d7b06f8213b2d63ee08b976f46a6b24f18c5ba250f2aeaad80b30a304e26",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_10000/grad_histories.json",
+      "sha256_before": "d8ecf8df4ac5d6b52f45e4c70c77e4dc93d037a30a95efcea9fa4c62354cc8fc",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_10000/time_histories.json",
+      "sha256_before": "2c9ff1af4edb0a91a67de0e2ee0ea6ea3103ed884b4ed2d25bc38aea108b0f5b",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_100000/grad_histories.json",
+      "sha256_before": "a6b5b16b3b32c7fb8717e8fe30d3fcca9400404061f045ee97a19f09af0a94d6",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_100000/time_histories.json",
+      "sha256_before": "130d473e157338d1ec10546c07c443f218a31241db8b47dc1e98acf486a7aa21",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_50000/grad_histories.json",
+      "sha256_before": "ffc72875190bcce18faafc0c49267bad4f8ae909ef0d8a830d38e2c4b219b591",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_50000/time_histories.json",
+      "sha256_before": "6c47cfacaf51c86209e6f0cd1439a350509c73706bfc5ba461e70bab4f87ddcf",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_500000/grad_histories.json",
+      "sha256_before": "10c3e4a8359db6621ad8858bd2baf50b98f62c0aa097bc03fd061871f4877cd5",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/discus/dim_500000/time_histories.json",
+      "sha256_before": "8c0f6c6810580752a6f1f3c5aeed46594a1d291595c864ee9c84785f05907576",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_10000/grad_histories.json",
+      "sha256_before": "04ee9f9dea58c85d40800e9acc0ed353cd302412eea5ad9d73c255d0455f2d04",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_10000/time_histories.json",
+      "sha256_before": "133721a7545457a50b0d1dc007e198e55c1a87eee35b6059c2e38bb0847f24d9",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_100000/grad_histories.json",
+      "sha256_before": "58b6611916b3a71aa34da2dd7acb68b78203bc2f9a59d6d38e04e28e4dba1b87",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_100000/time_histories.json",
+      "sha256_before": "26e4151761c696e9cf2759211ad167551cdac87f96732f4de2d9569cde935fe5",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_50000/grad_histories.json",
+      "sha256_before": "be6e122ed40576bb6c809370229b492dd5fc85e58de43c039eae7e1a0332fab9",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_50000/time_histories.json",
+      "sha256_before": "566e2ac14ad1e3f0fd10cf6c4ac5ccf4bce857bc9d1ce36929db45f7ea50b8b1",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_500000/grad_histories.json",
+      "sha256_before": "0f89a5d5960340d3b27fc9fcb23fc4cbaac89c84cc7ba919a78d19862190c68e",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/ellipsoidal/dim_500000/time_histories.json",
+      "sha256_before": "7ab52501a874914c9fc3555e5e1e93e322c29e4482e455a5ed619eb5adc752a0",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_10000/grad_histories.json",
+      "sha256_before": "5a13a22c2098f7c09179a89039d42101073cfbc98cc8a15c9e67c92c3beedb4b",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_10000/time_histories.json",
+      "sha256_before": "fc6ba1e1b3e24b478815e2df73651a0fb37a50ff4ea55701b03e19f883bae597",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_100000/grad_histories.json",
+      "sha256_before": "cee3f99c77b1c9f74b7e52b28ecbbe59b1e0c27ef288346c6cdbcb35856d7520",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_100000/time_histories.json",
+      "sha256_before": "8394113e27e29fa195cb323874f8eac5ce5a49f859ed12e0b32b3dd1ce270896",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_50000/grad_histories.json",
+      "sha256_before": "03deecb8a9e192e8305c9ac71f5e51fe63621b4accf592372ece51fe1e2c4fe8",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_50000/time_histories.json",
+      "sha256_before": "bd7acb31aae54a85c4017bb2e6d02a28c29ccc9e284d0c8dc6a5705843423562",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_500000/grad_histories.json",
+      "sha256_before": "3ea8bdc3cd49ec3f88b74b056fb343f700be7cfd55a9b23f84b9df0156922574",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/griewank/dim_500000/time_histories.json",
+      "sha256_before": "d69c21dbc4b47f345a651aa4105a7a8f0ebf26b9aa4ba89913ff36769d65d62a",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_10000/grad_histories.json",
+      "sha256_before": "6f33fdb4814bb4eaa86d86dd3dd57743ce6452092abeb66c15087b34b92bcd17",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_10000/time_histories.json",
+      "sha256_before": "bbe428cac96ca33e008e88fe27255322280c6fed28fcf3b2bb8cac69842ae463",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_100000/grad_histories.json",
+      "sha256_before": "177822990701271a4ca9309cfca84c0f5ea4e169c7eb97840fae62ce27cfb634",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_100000/time_histories.json",
+      "sha256_before": "5cd672a9ef20fec7e84af59d5b4f91a998355654b15ffaf01ea99855c3032c43",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_50000/grad_histories.json",
+      "sha256_before": "38f61517ad7f6cdae78fa145e8579f787220562d093641f8fa7edf4c1bb550be",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_50000/time_histories.json",
+      "sha256_before": "2e47f1ee93a6d25fea4df4f5fa29accfd862cf9bbec5ba0b57726d2d2b436646",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_500000/grad_histories.json",
+      "sha256_before": "069b42803df52d18285e76e280f9c29068409554fd0f73bc15baf8427f809e22",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/rastrigin/dim_500000/time_histories.json",
+      "sha256_before": "be3529733ec4191d71e74f1c1ba449c8f7f2e83cf87416e938980325bef5d284",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_10000/grad_histories.json",
+      "sha256_before": "86c9e3b2b2b196d6ae65e74e51c3a3e7273fd2536433e33c50dc20b09c6f64c3",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_10000/time_histories.json",
+      "sha256_before": "0413d08dc1138fd1fb482c5438e510526200a8b2d4552e1fa46bbbc89de62779",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_100000/grad_histories.json",
+      "sha256_before": "91de950ae58aa3a5b17733560df889f219ff3491c38ba54281c7b76d55d671ac",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_100000/time_histories.json",
+      "sha256_before": "4f0b426dce367c3e13e78f8c9707c738840cb646bcf088535a5173ec5145ad54",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_50000/grad_histories.json",
+      "sha256_before": "8f7cb4951df963e6cb6bddc58d405b27f2706cf2e1f9fe786dc602c390614e9e",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_50000/time_histories.json",
+      "sha256_before": "32dd663378e3ce0e6ca7c63d2c43e18c481f8c15fe49857a4565adcec3cba6ed",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_500000/grad_histories.json",
+      "sha256_before": "a255b80927c9134692207bb800d1933db26f852db9caa8ad7b73f2f50d733d1e",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/raw/schwefel/dim_500000/time_histories.json",
+      "sha256_before": "60e518950bffab57ff2831e2adc384b17304d1cc74cc2726bfa5161b0a949d1b",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/results/summary.csv",
+      "sha256_before": "6270c6331b7b5e13cfccba3063c87c05ab886b0f87cf4b28e7522aa47beb0a28",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/run_experiments.py",
+      "sha256_before": "cee7ffe5fe0a539f28d4aa44766913f55844051529180400dd5018551a67b432",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "legacy/实验设计/test_functions.py",
+      "sha256_before": "42247022bf4292ac548624ef87a0dc2d38c07c3b3bd9553b32b8f68d081dafac",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "package_manifest.json",
+      "sha256_before": "75adad478fd04d14918c8b40be7bd953ad9ad0e924d6a18196882bd8743e80ff",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "reference/experiment_A.csv",
+      "sha256_before": "45c2672c0507c38d276cf4a011a4973e5a97fbbfab5643bbeb5dbf96aad036a8",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "reference/experiment_B.csv",
+      "sha256_before": "d97c5a8f55e7bf4b2dbb2742c399ee086f97e098556a7ae9e43b7b21e31c60ef",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "reference/experiment_C.csv",
+      "sha256_before": "71b7009fc1ee18a52ec20106b05ad94434af3c8ccf6c3b1614f548242cb353f1",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "reference/experiment_C_histories.json",
+      "sha256_before": "63e2fd9a524f94025241ccf6359666803bb4a8548a15a06aad4465a22cd6dac9",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "reference/published_plot_data/data_provenance.json",
+      "sha256_before": "9223e8a091cd986e62d6a00809e6a6a3b9b585b22bd8897aac1d7ce422e601d9",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "requirements-legacy.txt",
+      "sha256_before": "93c1510480a7582f35a46eeebc38fd423d5f32feb80f5019caa939afcfc5222c",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "source_manifest.json",
+      "sha256_before": "699541e4b9469e81a13ff1443990044a6769c8ad7e33858478767a9a1835fc75",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "source_selection.csv",
+      "sha256_before": "af35b4b3a1c65f2724fea38d42c84a78f3cb01dd3fd5f8f7238dcc0f1c8f5e59",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/A_default_threads_followup.json",
+      "sha256_before": "441e137a8311c71305e5ff5ed3b6ed653897f184f2b4fd3cd6c170bf61a1eb87",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/environment_A.json",
+      "sha256_before": "ae29bf59027ed2b8ba4be5c883f7b4d1d8fe6f1c5ce13fe25a0743bda9f2b602",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/environment_B.json",
+      "sha256_before": "d6983dfd97c1c6be24741a6c5b71b0e30eb37b066bcd254f5d0a8924989209b3",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/environment_C.json",
+      "sha256_before": "4b0fecb7db2fe588dcb977745eb91bbb736bb6e43c4d64b2e54bb059ebd33dc5",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/experiment_B_summary.csv",
+      "sha256_before": "b8b34a353f438d734c6c0af0ad400b5eb79cd0a5fde1ea08a78a9f1550c52e5c",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/rerun_A.csv",
+      "sha256_before": "f6be921c996983ecb1322e6137202fedb0fcefa1af65047f3d935d32ef4cd755",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/rerun_B.csv",
+      "sha256_before": "03550c2881fe5239147c9b6cc3d1cb194fd57f558a8513b71c39dc98b7a95f3a",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/rerun_C.csv",
+      "sha256_before": "bbf43d688d9694dd2930c7bd575565aff8662b336f7686d75ff304052ddeb13c",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/rerun_comparison.json",
+      "sha256_before": "839de84d13144c10095b1f15a2dc3685531d9de6842b7c34c9015c1d811c3720",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    },
+    {
+      "path": "validation/verification.json",
+      "sha256_before": "9ceec58dad94d0dddadb76f3dd4f13fa7b8e826eb9760f56c964d1e913eb04d1",
+      "reason": "Retired experiments and duplicate/report-only code; required parameter bodies/data are relocated. See docs/migration.md."
+    }
+  ]
+}

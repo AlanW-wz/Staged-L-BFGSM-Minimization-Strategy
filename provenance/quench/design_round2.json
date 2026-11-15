@@ -1,0 +1,26 @@
+{
+  "study": "Exploratory replacement of two all-failure benchmarks after round 1",
+  "primary_method": "M5: SD -> ELS NCG -> L-BFGSM, threshold switching",
+  "original_audited_results": "C:/Users/alanwen/Desktop/JCTC/quench_study/results",
+  "original_fingerprint": "f3c53ddf0b69a74b35bc1e196f774f28d83da2ecd6ef9cd3a20c2dd3e80a2d91",
+  "selection": {
+    "F7": {
+      "old": "IC Levy",
+      "new": "Block Bohachevsky 3 (AQN experiments_10f)",
+      "reference": "Round 1 F3 Block Bohachevsky 2: M5 300/300 and tied for highest absolute success count.",
+      "change": "Each 2D block changes 0.3[1-cos(3 pi u)cos(4 pi v)] to 0.3[1-cos(3 pi u + 4 pi v)]; quadratic part and F3 initialization box are retained.",
+      "initial_uniform_per_coordinate": [-100,100]
+    },
+    "F9": {
+      "old": "Expanded Griewank-Rosenbrock",
+      "new": "8-coordinate open blocks of corrugated Rosenbrock",
+      "reference": "Round 1 F8 had the largest success count gain of M5 versus overall leader M6: 118 vs 59 per 300. M4 reached 119.",
+      "change": "Each block of 8 uses F8's open Rosenbrock chain (coefficients 100 and 1) plus 2[1-cos(2 pi(x-1))] on each coordinate. No Rosenbrock coupling crosses a block boundary.",
+      "initial_uniform_per_coordinate": [-3,3]
+    }
+  },
+  "frozen_solver_and_measurement": "Original solver, shared line search and timing implementation; original six methods, ten dimensions, thirty seeds, same stopping tolerances and budgets. New functions' function IDs are 7 and 9 for seed generation.",
+  "workload": {"fresh_rows": 3600, "unchanged_rows_reused": 14400, "combined_rows": 18000},
+  "interpretation": "Report round 2 beside the full round 1. Similarity of F3/F7 and F8/F9 is deliberate; combined rates describe this selected suite. Separate actual observations from the selection rationale. Do not treat reused rows or the exploratory comparison as a new independent replication.",
+  "outputs_requested": ["final_grad_l2", "cpu_seconds", "iterations", "converged", "evaluations", "reason"]
+}

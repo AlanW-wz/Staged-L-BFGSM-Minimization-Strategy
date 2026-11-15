@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "study": "round2_exploratory_posthoc",
+  "combined_fingerprint": "117b8bddaa33ab049d074d40a1256c58fe1783188550335e3f5bddf1f3a490c5",
+  "unique_runs": 18000,
+  "paired_starts": 3000,
+  "original_reused": 14400,
+  "replacement_new": 3600,
+  "replaced_function_ids": [
+    7,
+    9
+  ],
+  "function_names": [
+    "styblinski_tang",
+    "block_three_hump_camel",
+    "block_bohachevsky2",
+    "block_griewank",
+    "ic_cosine_mixture",
+    "ic_rastrigin",
+    "block_bohachevsky3",
+    "corrugated_rosenbrock",
+    "block8_corrugated_rosenbrock",
+    "heterogeneous_coupled_double_well"
+  ],
+  "old_source_reaudit": "Matches complete saved audit; 600 stratified round-1 trace checks",
+  "new_trace_checks": 3600,
+  "regenerated_replacement_starts": 600,
+  "replacement_initial_energy_and_gradient_recomputed": true,
+  "sources": {
+    "round1_reused": {
+      "csv": "..\\..\\results\\quench_results.csv",
+      "csv_sha256": "31234de19d01c0c8e771f44f60b8abc8f6878beeeebf5968f37a0a644f8d065e",
+      "sqlite": "..\\..\\results\\quench_results.sqlite3",
+      "fingerprint": "f3c53ddf0b69a74b35bc1e196f774f28d83da2ecd6ef9cd3a20c2dd3e80a2d91"
+    },
+    "round2_new": {
+      "csv": "..\\results_replacements\\quench_results.csv",
+      "csv_sha256": "2907487346eae2fbb7b0d721b007624e8ca2fde8d30a665bbfa5bd379a6f1119",
+      "sqlite": "..\\results_replacements\\quench_results.sqlite3",
+      "fingerprint": "12152a99b202d15d0d88a2b7adbf49fe986ffe848acce1c6cda15ffd9cf7f68d"
+    }
+  },
+  "external_trace_lookup": "SQLite runs PK=(fid,d,seed,method), column trace_npz, choose DB by source_round.",
+  "round1_audit_sha256": "c8dbf7fdfea8f37aa3604d4ad6148743e9b222e58f270406dbd1ee691f98b84e",
+  "selection_design": {
+    "study": "Exploratory replacement of two all-failure benchmarks after round 1",
+    "primary_method": "M5: SD -> ELS NCG -> L-BFGSM, threshold switching",
+    "original_audited_results": "C:/Users/alanwen/Desktop/JCTC/quench_study/results",
+    "original_fingerprint": "f3c53ddf0b69a74b35bc1e196f774f28d83da2ecd6ef9cd3a20c2dd3e80a2d91",
+    "selection": {
+      "F7": {
+        "old": "IC Levy",
+        "new": "Block Bohachevsky 3 (AQN experiments_10f)",
+        "reference": "Round 1 F3 Block Bohachevsky 2: M5 300/300 and tied for highest absolute success count.",
+        "change": "Each 2D block changes 0.3[1-cos(3 pi u)cos(4 pi v)] to 0.3[1-cos(3 pi u + 4 pi v)]; quadratic part and F3 initialization box are retained.",
+        "initial_uniform_per_coordinate": [
+          -100,
+          100
+        ]
+      },
+      "F9": {
+        "old": "Expanded Griewank-Rosenbrock",
+        "new": "8-coordinate open blocks of corrugated Rosenbrock",
+        "reference": "Round 1 F8 had the largest success count gain of M5 versus overall leader M6: 118 vs 59 per 300. M4 reached 119.",
+        "change": "Each block of 8 uses F8's open Rosenbrock chain (coefficients 100 and 1) plus 2[1-cos(2 pi(x-1))] on each coordinate. No Rosenbrock coupling crosses a block boundary.",
+        "initial_uniform_per_coordinate": [
+          -3,
+          3
+        ]
+      }
+    },
+    "frozen_solver_and_measurement": "Original solver, shared line search and timing implementation; original six methods, ten dimensions, thirty seeds, same stopping tolerances and budgets. New functions' function IDs are 7 and 9 for seed generation.",
+    "workload": {
+      "fresh_rows": 3600,
+      "unchanged_rows_reused": 14400,
+      "combined_rows": 18000
+    },
+    "interpretation": "Report round 2 beside the full round 1. Similarity of F3/F7 and F8/F9 is deliberate; combined rates describe this selected suite. Separate actual observations from the selection rationale. Do not treat reused rows or the exploratory comparison as a new independent replication.",
+    "outputs_requested": [
+      "final_grad_l2",
+      "cpu_seconds",
+      "iterations",
+      "converged",
+      "evaluations",
+      "reason"
+    ]
+  },
+  "artifact_sha256": {
+    "m5_comparison.csv": "a03272bf8f2d66965ef534a2cb262c1d5559ae6547f17f91749743c6cac7aea3",
+    "m5_comparison.json": "bb5b9787b1d96ee44093a6a11204a92afa543fadc5c8e4b15e2a41b6f1c6c057",
+    "method_summary.csv": "00c94a3c4b8d11f11e496a87399eabe3cc5c2c3a26fc54747454e863e0ee8735",
+    "quench_results.csv": "085d64f9dabf21637fd29eedb4913510ee3fbb82e37e312f731df02dacfd4cfd",
+    "report_zh.txt": "0b22c4ad9c453122ea09ce726eaf406d9d9da987267c0f15276f2347012ac3c2",
+    "stage_profiles.csv": "99c916fa9d451b1534c62435ccc8a48254578a05f55bc998f1b127e38d4a0c8d"
+  }
+}

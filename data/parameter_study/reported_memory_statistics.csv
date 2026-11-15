@@ -1,0 +1,5 @@
+method,reported_memory_use,reported_pair_acceptance,provenance
+lbfgsm_wolfe_c000,1,1,Historical reported value; complete per-iteration provenance unavailable
+lbfgsm_wolfe,0.144,0.145,Historical reported value; complete per-iteration provenance unavailable
+lbfgsm_wolfe_c025,0.18,0.185,Historical reported value; complete per-iteration provenance unavailable
+lbfgsm_wolfe_c025_c10,0.237,0.249,Historical reported value; complete per-iteration provenance unavailable
