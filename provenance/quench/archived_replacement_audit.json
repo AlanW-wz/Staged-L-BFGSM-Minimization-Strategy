@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-11T07:06:22+00:00",
+  "original_source_unchanged": true,
+  "original_csv_sha256": "085d64f9dabf21637fd29eedb4913510ee3fbb82e37e312f731df02dacfd4cfd",
+  "sensitivity_csv_sha256": "aaad11b270185863d6ffefcf6bd5c7073776fc3f1476fc7c59e89e868eb42cf4",
+  "replay_nontiming_metrics_identical": true,
+  "replay_all_trace_arrays_identical": true,
+  "original_run_count": 18000,
+  "removed_original_rows": 6,
+  "new_replacement_runs": 6,
+  "final_run_count": 18000,
+  "paired_starts": 3000,
+  "methods_per_start": 6,
+  "runs_per_method_dimension": 300,
+  "new_seed_fixed_before_outcomes": true,
+  "new_trace_audits": 6,
+  "diagnostic_trace_audits": 1,
+  "interpretation": "Post-hoc sensitivity analysis; original outlier is reproducible and is not a proven measurement/computation error."
+}

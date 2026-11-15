@@ -1,0 +1,13 @@
+.venv/
+.venv-*/
+.work/
+results/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.lock
+.DS_Store
+Thumbs.db

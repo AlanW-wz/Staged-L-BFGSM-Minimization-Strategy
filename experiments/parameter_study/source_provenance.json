@@ -1,0 +1,33 @@
+[
+  {
+    "original_path": "legacy/lbfgsm_algorithm.py",
+    "original_sha256": "0067dd1fd980b0121d5ad3a6cbfed02aa9ffd9633a26aacb00f5ce997709ebcf",
+    "changes": "Removed unused demo and obsolete prompt wording; numerical statements unchanged."
+  },
+  {
+    "original_path": "legacy/实验设计/test_functions.py",
+    "original_sha256": "42247022bf4292ac548624ef87a0dc2d38c07c3b3bd9553b32b8f68d081dafac",
+    "extracted_functions": [
+      "dixon_price",
+      "grad_dixon_price",
+      "levy",
+      "grad_levy",
+      "rastrigin",
+      "grad_rastrigin",
+      "schwefel",
+      "grad_schwefel"
+    ]
+  },
+  {
+    "original_path": "legacy/run_omega_levy_like_experiment.py",
+    "original_sha256": "3c768afb67392378fa473cdd9fa48fb4b82831f675d826b2c6f1aee32231cd85",
+    "extracted_functions": [
+      "levy_scaled",
+      "grad_levy_scaled",
+      "levy_shifted",
+      "grad_levy_shifted",
+      "trig_chain",
+      "grad_trig_chain"
+    ]
+  }
+]

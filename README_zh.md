@@ -1,52 +1,80 @@
-# 实验代码使用说明
+# 分阶段 L-BFGSM：数值实验代码
 
-本文件夹整理的是终稿第 3.1 节的数值优化实验，覆盖 A、B、C 三组实验；文件夹名 `code_of_experiment1` 不代表只包含实验 A。原始代码与实验数据保持原样，另提供统一运行入口。
+本仓库对应修订稿的两项解析函数实验：[英文说明](README.md)、[复现与来源](docs/reproducibility.md)、[整理记录](docs/migration.md)。
 
-**先看 [审查结果](AUDIT_zh.md)。当前不能把这个包描述为整篇论文的完整复现包。** 五步预比较的论文描述与归档算法存在差异，表 3 两个内存统计指标的来源尚不完整，分子模拟及 SAXS 资料也不在所检查的实验包内。
+| 实验 | 论文位置 | 规模 | 代码目录 |
+|---|---|---|---|
+| 谨慎更新参数研究 | 3.1.1，表 2 | 七函数、四维度、四组参数，共 112 次 | `experiments/parameter_study/` |
+| 局部淬火切换比较 | 3.1.2，图 1 | 十函数、十维度、30 个配对起点、六方法，每套数据 18,000 次 | `experiments/local_quench/` |
 
-## 最简单的使用方式
+两项实验分别保存函数定义、预算、停止条件和计时方式。局部淬火使用阈值切换，不包含分子模拟的五步前瞻比较。本仓库未提供 GROMACS 接口、分子输入、MD 轨迹或 SAXS 数据。
 
-在本文件夹打开终端，使用 Python 3.12.7：
+## 安装与快速检查
 
-```sh
+推荐 Python 3.12。当前验证环境为 Python 3.12.14、NumPy 2.3.5、SciPy 1.16.3、Matplotlib 3.11.2。
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python verify.py
-python replot.py
+python -m unittest discover -s tests -v
 ```
 
-这会检查代码来源、函数梯度、数据完整性，随后利用真实归档数据重绘数值实验图，输出到 `results/reference_replot/`。
+原参数实验使用 Python 3.12.7、NumPy 1.26.4、SciPy 1.13.1；如需研究其历史数值行为，请另建环境并安装 `requirements-parameter-archive.txt`。不同环境下不承诺优化轨迹或耗时完全一致。
 
-重新计算而非读取历史结果：
+## 从归档数据恢复表格和图
 
-```sh
-python reproduce.py --experiment all --smoke --out results/smoke
-python reproduce.py --experiment A --out results/run_A
-python reproduce.py --experiment B --out results/run_B
-python reproduce.py --experiment C --out results/run_C
+```powershell
+python -m experiments.parameter_study.summary --out results/parameter_summary.csv
+python -m analysis.rebuild --out results/rebuilt_data
+python replot.py --out results/quench_figure
 ```
 
-第一条仅为小规模运行检查，不是论文结果。后面三条分别运行完整的 A、B、C。B/C 包括 50 万维测试，需要较多时间和内存。输出目录必须为空；再次执行时换一个目录名，避免覆盖既有结果。
+这些命令不重新执行完整优化实验。核验内容包括文件哈希、三套完整淬火样本、起点配对、停止条件、两函数替换与一次配对起点替换、参数表 12 个可恢复数值、三联图 60 个维度—方法汇总点。绘图导出 PDF、PNG、SVG、统计 CSV、图注及生成清单，图例使用方法名，图注不列具体种子编号。
 
-如果要把新计算的结果一起绘图：
+`data/` 保留原测量；`results/` 用于生成结果并被 Git 忽略。重建和绘图命令要求新的或空的输出目录，避免覆盖已有文件。
 
-```sh
-python reproduce.py --experiment all --out results/full
-python replot.py --data results/full --out results/full_plots
+## 运行代码
+
+先查看实验计划：
+
+```powershell
+python reproduce.py --study parameters --plan-only
+python reproduce.py --study quench --suite round2 --plan-only
 ```
 
-## 论文与代码的对应关系
+小规模运行检查：
 
-| 论文内容 | 实际依赖 | 整理后的入口 |
-|---|---|---|
-| 3.1.1 / 图 1(a)：9 函数、4 方法、4 维度 | 原始拟牛顿函数、`lbfgsm_algorithm.py`、测试函数 | `reproduce.py --experiment A ...` |
-| 3.1.2 / 表 3：7 函数、4 参数、4 维度 | 原始 L-BFGSM、Levy 变体与 trig_chain | `reproduce.py --experiment B ...` |
-| 3.1.3 / 图 1(b,c)：11 函数、6 方法、4 维度 | `hybrid_methods.py`、ELS-NCG、L-BFGSM、5 个补充函数 | `reproduce.py --experiment C ...` |
-| 原始图表数据和统计 | `reference/` 内归档记录 | `replot.py` |
+```powershell
+python reproduce.py --study parameters --smoke --out results/parameter_smoke
+python reproduce.py --study quench --smoke --out results/quench_smoke --workers 2
+```
 
-原始文件位于 `legacy/`；每个复制文件的出处和校验值位于 `source_manifest.json`。`source_selection.csv` 列出实验目录内各 Python 文件是否入选。早期二维 Rosenbrock、Wood、LJ/FENE 演示、替代参数探索和旧 Word 报告脚本不作为最终实验入口。
+参数 smoke 为 28 次（10 维）；淬火 smoke 为 120 次（16、32 维）。这些检查不计入论文数据。
 
-## 上传 GitHub 的范围
+完整实验：
 
-上传本文件夹中的源码、`reference/`、`legacy/` 所选数据、说明及验证记录即可。`.gitignore` 已排除新运行结果、缓存、虚拟环境和日志。`legacy/` 中重复保留的归档数据用于核对原始绘图输入，不应误当成新生成的测试结果。
+```powershell
+python reproduce.py --study parameters --out results/parameter_full
+python reproduce.py --study quench --suite round1 --out results/quench_round1 --workers 4
+python reproduce.py --study quench --suite round2 --out results/quench_round2 --workers 4
+```
 
-本次仅做本地整理，没有创建仓库或执行推送。作者仍需确定仓库许可证与引用信息。不要把 `AFM_article` 整个目录上传：本代码包已经与论文 PDF、投稿源文件和参考文献分开。
+参数实验可加 `--dims 10000` 只运行一个论文维度。淬火入口可按函数、维度、种子、方法选取子集；完整选项见 `python -m experiments.local_quench.run --help`。六方法的补充起点可通过以下命令重跑：
+
+```powershell
+python -m experiments.local_quench.run --suite round2 --functions block8_corrugated_rosenbrock --dims 1000 --seeds 2026110731 --out results/supplementary_rerun --workers 1
+```
+
+完整实验可能耗时较长。淬火结果及接受迭代轨迹逐次写入 SQLite；相同命令可以续跑，源码、环境或配置变化会拒绝继续旧检查点。参数实验逐次保存结果，但需新目录启动，不自动续跑。
+
+## 数据与解释边界
+
+最终三联图属于看过先前结果后进行的探索性敏感性比较：第二轮替换两种函数，复用 14,400 条、补入 3,600 条；之后再将一个起点对六方法同时替换。原高残差能够复现，不能作为已确认的计算错误处理。
+
+`data/local_quench/` 同时保存 `round1.csv`、`round2.csv`、最终 `manuscript.csv`、两函数的新测量、六条补充测量、被替换的六条原始记录及原图统计。`analysis.rebuild` 可以核验并重建这条数据链。
+
+每个图点包含所有 300 次终点，包括预算内未达标结果；阴影为 30 个十函数批次均值的实际最小—最大范围，不是置信区间。淬火采用进程 CPU 时间，参数研究采用实际经过的 wall-clock 时间。参数表中的内存利用率、曲率对接受率仍作为历史报告值保留，其完整逐次来源未恢复，程序不把它们冒充重新统计得到的结果。
+
+正文说明与图例使用方法名和函数名；归档 CSV 的内部编号与生成随机起点所需的数字索引保持稳定。旧准牛顿家族比较、旧十一函数实验、重复绘图脚本和一次性报告入口已移出当前目录，可由 Git 历史恢复。原本地 `quench_study` 目录未改动。

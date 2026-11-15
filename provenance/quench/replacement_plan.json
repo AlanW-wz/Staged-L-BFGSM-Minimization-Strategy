@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-11-11T07:05:47+00:00",
+  "analysis": "post-hoc one-start replacement sensitivity",
+  "original_csv_sha256": "085d64f9dabf21637fd29eedb4913510ee3fbb82e37e312f731df02dacfd4cfd",
+  "function_id": 9,
+  "dimension": 1000,
+  "old_seed": 2026110701,
+  "new_seed": 2026110731,
+  "methods": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "M5",
+    "M6"
+  ],
+  "reason": "User requested exclusion after inspecting M5's largest endpoint; not a pre-specified exclusion rule or demonstrated data error.",
+  "seed_rule": "Next unused integer seed, fixed before observing any supplementary outcomes; one attempt per method, all outcomes retained.",
+  "pairing": "Replace the same F9/1000-d starting point for all six methods; preserve actual seeds and initial-point hashes.",
+  "aggregation": "30 ten-function batch slots per dimension. The former 2026110701 batch slot at d=1000 uses seed 2026110731 for F9 only; other nine functions retain the old seed.",
+  "solver": {
+    "max_iterations": 2000,
+    "max_evaluations": 20000,
+    "tol": 1e-06
+  },
+  "numpy": "2.3.5",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "source_sha256": {
+    "problems.py": "211582479e5e07a65cd174730f24499e455380cdbdf353e3d982b6cc1ecc4b0b",
+    "original_problems.py": "a43f9a88558446f4e1e4940e355df5e705172450ec8c613ac1b465e81df31bf8",
+    "solvers.py": "5ad9553df89d6526d471be6fbaec2ee1ac6114d36de899a410d1071d390a1d5d",
+    "vendor/aqn_10f.py": "f3063089f8bf2197c121269bdb2360b74c51b311f3414bed0899110deebaa88a",
+    "vendor/aqn_v2.py": "fd586d680f8b524632e9ee1139fd647a43695872734f2cc921d330a3feffaf91",
+    "run_replacements.py": "db110d22821d487000ec3c3ba395760a062df2cf94e6b62496fe203cfc872bee",
+    "design_round2.json": "38518befa44f92927c971e66cd5b7da04f3c14afb66f7f20fe59a5e8d7c11dac",
+    "runner.py": "80286d2e77aef2222917274fee32feeea5470d1be7c2837580da87ab13fb87e2"
+  },
+  "timing": "time.process_time; numerical threads=1; supplementary runs executed serially on the same host/runtime."
+}

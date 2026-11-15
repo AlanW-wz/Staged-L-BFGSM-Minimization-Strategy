@@ -1,6 +1,5 @@
-# Paper's numerical environment: Python 3.12.7
-numpy==1.26.4
-scipy==1.13.1
-# Plotting/data tools: versions used for the package checks
-pandas==2.2.2
-matplotlib==3.9.2
+# Working environment validated with Python 3.12.14.
+# Historical parameter-study pins are in requirements-parameter-archive.txt.
+numpy==2.3.5
+scipy==1.16.3
+matplotlib==3.11.2

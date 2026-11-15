@@ -1,0 +1,49 @@
+{
+  "method": "M5",
+  "converged": false,
+  "reason": "evaluation_limit",
+  "evaluations": 20000,
+  "iterations": 1984,
+  "initial_f": 1734682.184413839,
+  "final_f": 984.3975888313761,
+  "initial_grad_inf": 15316.215918507934,
+  "final_grad_inf": 42.57289404680089,
+  "initial_grad_l2": 139313.50702632175,
+  "final_grad_l2": 49.3050450732322,
+  "phase_iterations": {
+    "SD": 10,
+    "NCG": 264,
+    "LBFGSM": 1710,
+    "LBFGS": 0
+  },
+  "phase_evaluations": {
+    "SD": 117,
+    "NCG": 3018,
+    "LBFGSM": 16865,
+    "LBFGS": 0
+  },
+  "switches": [
+    {
+      "from": "SD",
+      "to": "NCG",
+      "iteration": 10,
+      "evaluations": 117
+    },
+    {
+      "from": "NCG",
+      "to": "LBFGSM",
+      "iteration": 274,
+      "evaluations": 3135
+    }
+  ],
+  "fallbacks": 0,
+  "restarts": 0,
+  "fid": 9,
+  "name": "block8_corrugated_rosenbrock",
+  "d": 1000,
+  "seed": 2026110701,
+  "x0_sha256": "bcf83dcbea4de90478ce8eb418305fb3878a48253feb1d452575a5599fc9ba6d",
+  "fstar": 0.0,
+  "cpu_seconds": 0.890625,
+  "wall_seconds": 0.881910500000231
+}
