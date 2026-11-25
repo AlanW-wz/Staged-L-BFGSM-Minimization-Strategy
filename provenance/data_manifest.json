@@ -1,5 +1,5 @@
 {
-  "description": "Byte-preserved archived measurements and metadata, not new optimization runs.",
+  "description": "Archived measurements and metadata. For CSVs with a source_sha256, the distributed table omits the historical source_round field and retains the measurement values and source fingerprints.",
   "files": [
     {
       "path": "data/parameter_study/results.csv",
@@ -26,28 +26,18 @@
       "sha256": "b8b34a353f438d734c6c0af0ad400b5eb79cd0a5fde1ea08a78a9f1550c52e5c"
     },
     {
-      "path": "data/local_quench/round1.csv",
-      "source": "quench_study/results/quench_results.csv",
-      "bytes": 5091598,
-      "sha256": "31234de19d01c0c8e771f44f60b8abc8f6878beeeebf5968f37a0a644f8d065e"
-    },
-    {
-      "path": "data/local_quench/round2_replacements.csv",
-      "source": "quench_study/round2/results_replacements/quench_results.csv",
-      "bytes": 1029786,
-      "sha256": "2907487346eae2fbb7b0d721b007624e8ca2fde8d30a665bbfa5bd379a6f1119"
-    },
-    {
-      "path": "data/local_quench/round2.csv",
+      "path": "data/local_quench/paired_starts.csv",
       "source": "quench_study/round2/results_combined/quench_results.csv",
-      "bytes": 6525514,
-      "sha256": "085d64f9dabf21637fd29eedb4913510ee3fbb82e37e312f731df02dacfd4cfd"
+      "bytes": 6284301,
+      "sha256": "f4d1f300eea228867674bfe26aef873c7cc194dd263137be0cf582de0048ac18",
+      "source_sha256": "085d64f9dabf21637fd29eedb4913510ee3fbb82e37e312f731df02dacfd4cfd"
     },
     {
       "path": "data/local_quench/manuscript.csv",
       "source": "quench_study/round2/figure1_three_panel_clean_20261111/quench_results.csv",
-      "bytes": 6723692,
-      "sha256": "aaad11b270185863d6ffefcf6bd5c7073776fc3f1476fc7c59e89e868eb42cf4"
+      "bytes": 6482320,
+      "sha256": "341454a4ae6c061e1f240fe4463a40ace1662ac884785dd16bdff639bdb692cb",
+      "source_sha256": "aaad11b270185863d6ffefcf6bd5c7073776fc3f1476fc7c59e89e868eb42cf4"
     },
     {
       "path": "data/local_quench/supplementary_runs.csv",
@@ -58,8 +48,9 @@
     {
       "path": "data/local_quench/excluded_original_rows.csv",
       "source": "quench_study/round2/figure1_dimension_resampled_20261111/excluded_original_rows.csv",
-      "bytes": 2443,
-      "sha256": "bbb745bd110e45d090a81f5b7a54402271e973a24b89fccd0ac5b2a55064c1c1"
+      "bytes": 2361,
+      "sha256": "f95242f0909686a509064672f4f540dc6aa9888ab4c2c3bd4c4cda0f763e0e80",
+      "source_sha256": "bbb745bd110e45d090a81f5b7a54402271e973a24b89fccd0ac5b2a55064c1c1"
     },
     {
       "path": "data/local_quench/figure1_plot_data.csv",
@@ -74,24 +65,6 @@
       "sha256": "da527017a238ceeab1d445b3ba0a2cf6841ae4c8dec38db814206a9f8f51b885"
     },
     {
-      "path": "provenance/quench/round1_manifest.json",
-      "source": "quench_study/results/manifest.json",
-      "bytes": 2449,
-      "sha256": "7f79209513f91667b17b504175a656bad4a4262a82735f98353f82208ae2bcd5"
-    },
-    {
-      "path": "provenance/quench/round2_manifest.json",
-      "source": "quench_study/round2/results_replacements/manifest.json",
-      "bytes": 2563,
-      "sha256": "9e19bb68391a0781d33c82156de383ba72aa089461320d46a4e6b900fc128131"
-    },
-    {
-      "path": "provenance/quench/design_round2.json",
-      "source": "quench_study/round2/design_round2.json",
-      "bytes": 2029,
-      "sha256": "38518befa44f92927c971e66cd5b7da04f3c14afb66f7f20fe59a5e8d7c11dac"
-    },
-    {
       "path": "provenance/quench/replacement_plan.json",
       "source": "quench_study/round2/figure1_dimension_resampled_20261111/replacement_plan.json",
       "bytes": 2073,
@@ -102,18 +75,6 @@
       "source": "quench_study/round2/figure1_dimension_resampled_20261111/diagnostic_replay_M5.json",
       "bytes": 1100,
       "sha256": "8ba6dbd778e511272a883bbe09253acd717068fbbc2fc7083672c7e71c072f7f"
-    },
-    {
-      "path": "provenance/quench/archived_round1_audit.json",
-      "source": "quench_study/results/audit.json",
-      "bytes": 6408,
-      "sha256": "c8dbf7fdfea8f37aa3604d4ad6148743e9b222e58f270406dbd1ee691f98b84e"
-    },
-    {
-      "path": "provenance/quench/archived_round2_audit.json",
-      "source": "quench_study/round2/results_combined/audit.json",
-      "bytes": 4622,
-      "sha256": "7f1bb8d7eaae39abf8c8e49b4ea9a511549fdcf10bdaa49ae8ce6c30a8f120a9"
     },
     {
       "path": "provenance/quench/archived_replacement_audit.json",

@@ -7,5 +7,3 @@
 *.csv -text whitespace=cr-at-eol
 *.json -text whitespace=cr-at-eol
 experiments/local_quench/solvers.py -text whitespace=cr-at-eol,-blank-at-eof
-experiments/local_quench/vendor/aqn_10f.py -text whitespace=cr-at-eol
-experiments/local_quench/vendor/aqn_v2.py -text whitespace=cr-at-eol

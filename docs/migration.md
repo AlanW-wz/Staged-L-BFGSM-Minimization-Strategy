@@ -14,7 +14,6 @@ Sections 3.1.1 and 3.1.2.
 | Quasi-Newton-family comparison and old eleven-function convergence experiment | Removed from active tree because these experiments were removed from the revised manuscript |
 | Legacy one-off reports, cached figure generators and duplicate staged solvers | Removed; current execution and plotting use the documented portable entry points |
 | Missing `src` imports in root entry points | Replaced by imports of the included `experiments` and `analysis` packages |
-| Duplicate round-one/round-two quench runners and solvers | One runner and solver, with an explicit suite selector |
 | Current three-panel plotting script | Ported to `analysis/quench_plot.py`; absolute four-panel dependency and external skill dependency removed |
 | Four-panel endpoint-distance/refinement experiments | Not imported because the selected manuscript figure does not use them |
 | Old package/source-selection manifests | Replaced by current data checksums, extraction provenance and an explicit migration record |
@@ -23,7 +22,8 @@ Sections 3.1.1 and 3.1.2.
 Some measurements and computational bodies were relocated, not discarded; the
 table above identifies these cases. All prior files remain recoverable from Git
 history. `provenance/data_manifest.json` identifies each imported archival file,
-its original relative location and its unchanged hash.
+its source location and the hash of the distributed file. Where a table was repackaged,
+the manifest also records the source file hash.
 
 The source directory `quench_study` and manuscript/SI files outside this repository
 were read only. No large experiment was automatically rerun during reorganization.

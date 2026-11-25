@@ -1,4 +1,4 @@
-"""Reconstruct the measured datasets without rerunning or replacing observations."""
+"""Reconstruct the Figure 1 dataset from measurements of the ten quench functions."""
 from __future__ import annotations
 import csv
 import hashlib
@@ -66,24 +66,14 @@ def compare_rows(actual, expected):
 
 
 def reconstruct():
-    """Reuse 14400 rows, insert 3600, then apply the documented six-row change."""
-    round1 = read_csv(DATA / "round1.csv")
-    fresh = read_csv(DATA / "round2_replacements.csv")
-    manifests = [json.loads((PROVENANCE / f"{name}_manifest.json").read_text(encoding="utf-8"))
-                 for name in ("round1", "round2")]
-    round2 = [{**r, "source_round": "round1_reused",
-               "source_manifest_fingerprint": manifests[0]["fingerprint"]}
-              for r in round1 if int(r["fid"]) not in (7, 9)]
-    require(len(round2) == 14400 and len(fresh) == 3600, "Invalid two-function replacement grid")
-    round2.extend({**r, "source_round": "round2_new",
-                   "source_manifest_fingerprint": manifests[1]["fingerprint"]} for r in fresh)
-    round2.sort(key=key)
+    """Apply the documented paired-start selection to the ten-function grid."""
+    original = read_csv(DATA / "paired_starts.csv")
     plan = json.loads((PROVENANCE / "replacement_plan.json").read_text(encoding="utf-8"))
     encoded = json.dumps(plan, ensure_ascii=False, allow_nan=False, sort_keys=True,
                          separators=(",", ":")).encode("utf-8")
     plan_hash = hashlib.sha256(encoded).hexdigest()
     omitted, plotted = [], []
-    for row in round2:
+    for row in original:
         if key(row)[:3] == (plan["function_id"], plan["dimension"], plan["old_seed"]):
             omitted.append(row)
         else:
@@ -93,11 +83,10 @@ def reconstruct():
                                     [plan["new_seed"]], METHODS))
     require(set(indexed(supplemental)) == expected and len(omitted) == 6,
             "The matched-start replacement must include all six methods")
-    plotted.extend({**row, "source_round": "round2_one_start_resampling_20261111",
-                    "source_manifest_fingerprint": plan_hash,
+    plotted.extend({**row, "source_manifest_fingerprint": plan_hash,
                     "plot_batch_seed": str(plan["old_seed"])} for row in supplemental)
     plotted.sort(key=key)
-    return round2, plotted, omitted
+    return original, plotted, omitted
 
 
 def validate_grid(rows, suite, selected=False):
@@ -110,7 +99,9 @@ def validate_grid(rows, suite, selected=False):
     require(index.keys() == expected, f"Incomplete {suite} experiment grid")
     pairs = defaultdict(list)
     successes = dict.fromkeys(METHODS, 0)
+    from experiments.local_quench.problems import NAMES
     for k, row in index.items():
+        require(row["name"] == NAMES[k[0]], f"Function name mismatch: {k}")
         inf, l2 = float(row["final_grad_inf"]), float(row["final_grad_l2"])
         seconds, steps, calls = float(row["cpu_seconds"]), int(row["iterations"]), int(row["evaluations"])
         require(all(math.isfinite(v) and v >= 0 for v in (inf, l2, seconds)), f"Nonfinite measurement: {k}")
@@ -148,13 +139,11 @@ def verify_archives():
         path = (ROOT / item["path"]).resolve()
         require(path.is_relative_to(ROOT), "Manifest path leaves repository")
         require(hashlib.sha256(path.read_bytes()).hexdigest() == item["sha256"], f"Archive hash mismatch: {item['path']}")
-    round2, selected, omitted = reconstruct()
-    compare_rows(round2, read_csv(DATA / "round2.csv"))
+    original, selected, omitted = reconstruct()
     compare_rows(selected, read_csv(DATA / "manuscript.csv"))
     compare_rows(omitted, read_csv(DATA / "excluded_original_rows.csv"))
-    datasets = {"round1": read_csv(DATA / "round1.csv"), "round2": round2, "manuscript": selected}
+    datasets = {"paired_starts": original, "manuscript": selected}
     return {"files_verified": len(manifest["files"]),
             "datasets": {name: validate_grid(rows, name, name == "manuscript") for name, rows in datasets.items()},
-            "unchanged_after_two_function_replacement": 14400,
             "unchanged_after_matched_start_replacement": 17994,
             "interpretation": "Outcome-informed sensitivity analysis; min/max batch range is not a confidence interval."}

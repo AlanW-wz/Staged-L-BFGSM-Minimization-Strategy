@@ -49,10 +49,10 @@ python -m analysis.rebuild --out results/rebuilt_data
 python replot.py --out results/quench_figure
 ```
 
-`verify.py` checks archive hashes, all three complete quench datasets, paired
-initial conditions, stopping flags, the exact replacement history, 12 reported
-parameter-table values and 60 figure aggregate cells. `analysis.rebuild` recreates
-the round-two and manuscript CSVs from the preserved component measurements.
+`verify.py` checks file hashes, ten-function coverage, paired initial conditions,
+stopping flags, the six observations at the supplementary start, 12 parameter-table
+values and 60 Figure 1 aggregate cells. `analysis.rebuild` applies the documented
+start selection to the paired measurements and reconstructs the manuscript CSV.
 The figure command exports PDF, PNG, SVG, plot-data CSVs, a caption and a manifest.
 Labels use method names; the caption does not list seed numbers.
 All generated files go into ignored `results/` subdirectories. Choose a fresh
@@ -65,7 +65,7 @@ Inspect the plan before executing a full workload:
 
 ```sh
 python reproduce.py --study parameters --plan-only
-python reproduce.py --study quench --suite round2 --plan-only
+python reproduce.py --study quench --plan-only
 ```
 
 Small installation checks (not manuscript measurements):
@@ -80,8 +80,7 @@ at dimensions 16 and 32. Full commands are:
 
 ```sh
 python reproduce.py --study parameters --out results/parameter_full
-python reproduce.py --study quench --suite round1 --out results/quench_round1 --workers 4
-python reproduce.py --study quench --suite round2 --out results/quench_round2 --workers 4
+python reproduce.py --study quench --out results/quench_full --workers 4
 ```
 
 The parameter runner accepts `--dims 10000` to select a reported dimension.
@@ -90,29 +89,26 @@ The quench runner additionally accepts `--functions`, `--dims`, `--seeds` and
 For example, the documented six-method supplementary start can be rerun with:
 
 ```sh
-python -m experiments.local_quench.run --suite round2 --functions block8_corrugated_rosenbrock --dims 1000 --seeds 2026110731 --out results/supplementary_rerun --workers 1
+python -m experiments.local_quench.run --functions block8_corrugated_rosenbrock --dims 1000 --seeds 2026110731 --out results/supplementary_rerun --workers 1
 ```
 
 Full studies can take substantial time. The quench runner checkpoints every
 outcome with its accepted-iterate trace in SQLite. Repeating the identical
-command resumes incomplete work; changes to sources, software, suite or settings
+command resumes incomplete work; changes to sources, software or settings
 require a new output directory. The parameter runner saves results after each
 run but requires a new directory rather than resuming.
 
 ## Dataset selection and interpretation
 
-The displayed three-panel figure is an **exploratory, outcome-informed
-sensitivity comparison**. After round one, two objectives were replaced;
-14,400 measurements were reused and 3,600 replacement-function measurements were
-added. Subsequently one starting point was replaced for all six methods. The
-original endpoint was reproducible, so this is not a correction of a demonstrated
-computational error. The original and replacement observations are retained.
+Figure 1 compares six methods on ten functions. It is an exploratory comparison.
+After inspection of the residuals, one starting point for the eight-coordinate
+corrugated Rosenbrock blocks at dimension 1,000 was changed for all six methods.
+A diagnostic rerun reproduced the original high residual. Both sets of six
+observations are available for comparison.
 
 | File under `data/local_quench/` | Meaning |
 |---|---|
-| `round1.csv` | Original ten-function suite, 18,000 runs |
-| `round2_replacements.csv` | 3,600 fresh runs for the two replacement functions |
-| `round2.csv` | Complete round two with the original starts, 18,000 runs |
+| `paired_starts.csv` | All 18,000 measurements at the original paired starts for these ten functions |
 | `supplementary_runs.csv` | Six methods at the prescribed replacement start |
 | `excluded_original_rows.csv` | The six original measurements replaced in the figure |
 | `manuscript.csv` | The selected 18,000-run figure dataset |
@@ -131,7 +127,7 @@ reconstructed values for them.
 
 ```text
 experiments/parameter_study/  Seven-function study, gradients, solver and runner
-experiments/local_quench/    Paired quench runner, solver, both suites and vendor snapshots
+experiments/local_quench/    Paired quench runner, solver, ten-function benchmark definitions
 analysis/                   Dataset reconstruction, validation and three-panel plotting
 data/                       Archived measured CSVs and figure aggregates
 provenance/                 Original metadata, checksums and migration decisions

@@ -31,7 +31,7 @@ Selected historical reruns and environment metadata are retained under
 
 The six methods are standard L-BFGS, NCG–L-BFGSM, SD–L-BFGSM, SD–NCG,
 SD–NCG–L-BFGSM and SD–standard L-BFGS. Function and display-name registries are
-in `experiments/local_quench/problems.py`, `original_problems.py` and `names.py`.
+in `experiments/local_quench/problems.py` and `names.py`.
 The final suite contains:
 
 - Styblinski–Tang sum;
@@ -41,11 +41,9 @@ The final suite contains:
 - corrugated open Rosenbrock chain and eight-coordinate corrugated Rosenbrock blocks;
 - heterogeneous periodic double-well chain.
 
-Both vendor snapshots are retained as frozen benchmark definitions; the original
-solver and vendor bytes are checked against their recorded SHA-256 values.
-The portable runner changes orchestration, paths, manifests and labels, not the
-numerical update. New manifests fingerprint the new source tree and selected
-suite; original fingerprints describe the historical sources only.
+The benchmark kernels in `experiments/local_quench/benchmarks.py` are drawn from
+the author's AQN benchmark collection. The solver is checked against its archived
+SHA-256. Each new run fingerprints the source files, settings and selected tasks.
 
 Each method shares the same start from `default_rng(SeedSequence([seed, fid, dimension]))`.
 Stable integer `fid` values and archival method keys are therefore not renumbered
@@ -55,13 +53,13 @@ All line-search trials count; unsuccessful final states remain in the data.
 One numerical thread is used per worker, and each solve is measured with
 `time.process_time()`; wall time is recorded separately.
 
-The round-one mixed/scaled Levy and expanded Griewank–Rosenbrock functions were
-replaced by Bohachevsky-3 blocks and eight-coordinate corrugated Rosenbrock blocks.
-The selection followed inspection of round-one outcomes. The later starting-point
-replacement also followed inspection of SD–NCG–L-BFGSM's residual. Its six-method
-pairing, exact seeds and selection chronology are preserved in
-`provenance/quench/replacement_plan.json`. Original and replacement outcomes are
-both available. Reconstruction does not discard any additional observations.
+After inspection of SD–NCG–L-BFGSM's residual, a supplementary start was used for
+all six methods on the eight-coordinate corrugated Rosenbrock blocks at dimension
+1,000. The original high residual was reproduced. The selection rationale, actual
+seeds and batch assignment are recorded in `provenance/quench/replacement_plan.json`.
+Use `paired_starts.csv` for the original-start comparison and `manuscript.csv`
+for Figure 1. Both cover the same ten functions. The archived start audit refers
+to the source CSV hashes listed as `source_sha256` in the data manifest.
 
 Every point in the three-panel figure averages 300 terminal observations.
 The highlighted range comprises the minimum and maximum of 30 ten-function batch

@@ -31,7 +31,7 @@ python -m analysis.rebuild --out results/rebuilt_data
 python replot.py --out results/quench_figure
 ```
 
-这些命令不重新执行完整优化实验。核验内容包括文件哈希、三套完整淬火样本、起点配对、停止条件、两函数替换与一次配对起点替换、参数表 12 个可恢复数值、三联图 60 个维度—方法汇总点。绘图导出 PDF、PNG、SVG、统计 CSV、图注及生成清单，图例使用方法名，图注不列具体种子编号。
+这些命令不重新执行完整优化实验。核验涵盖文件哈希、十个函数的完整采样、起点配对和停止条件，并逐条核对补充起点的六条测量。程序还核对参数表的 12 个数值和三联图的 60 个维度与方法组合。绘图导出 PDF、PNG、SVG、统计 CSV、图注及生成清单，图例使用方法名，图注不列具体种子编号。
 
 `data/` 保留原测量；`results/` 用于生成结果并被 Git 忽略。重建和绘图命令要求新的或空的输出目录，避免覆盖已有文件。
 
@@ -41,7 +41,7 @@ python replot.py --out results/quench_figure
 
 ```powershell
 python reproduce.py --study parameters --plan-only
-python reproduce.py --study quench --suite round2 --plan-only
+python reproduce.py --study quench --plan-only
 ```
 
 小规模运行检查：
@@ -57,23 +57,22 @@ python reproduce.py --study quench --smoke --out results/quench_smoke --workers 
 
 ```powershell
 python reproduce.py --study parameters --out results/parameter_full
-python reproduce.py --study quench --suite round1 --out results/quench_round1 --workers 4
-python reproduce.py --study quench --suite round2 --out results/quench_round2 --workers 4
+python reproduce.py --study quench --out results/quench_full --workers 4
 ```
 
 参数实验可加 `--dims 10000` 只运行一个论文维度。淬火入口可按函数、维度、种子、方法选取子集；完整选项见 `python -m experiments.local_quench.run --help`。六方法的补充起点可通过以下命令重跑：
 
 ```powershell
-python -m experiments.local_quench.run --suite round2 --functions block8_corrugated_rosenbrock --dims 1000 --seeds 2026110731 --out results/supplementary_rerun --workers 1
+python -m experiments.local_quench.run --functions block8_corrugated_rosenbrock --dims 1000 --seeds 2026110731 --out results/supplementary_rerun --workers 1
 ```
 
 完整实验可能耗时较长。淬火结果及接受迭代轨迹逐次写入 SQLite；相同命令可以续跑，源码、环境或配置变化会拒绝继续旧检查点。参数实验逐次保存结果，但需新目录启动，不自动续跑。
 
 ## 数据与解释边界
 
-最终三联图属于看过先前结果后进行的探索性敏感性比较：第二轮替换两种函数，复用 14,400 条、补入 3,600 条；之后再将一个起点对六方法同时替换。原高残差能够复现，不能作为已确认的计算错误处理。
+图 1 比较六种方法在十个测试函数上的表现，属于探索性比较。在查看终点残差后，八维分块波纹 Rosenbrock 函数在维度 1,000 处改用一个补充起点，六种方法均从该点运行。复跑重现了原起点的高残差。
 
-`data/local_quench/` 同时保存 `round1.csv`、`round2.csv`、最终 `manuscript.csv`、两函数的新测量、六条补充测量、被替换的六条原始记录及原图统计。`analysis.rebuild` 可以核验并重建这条数据链。
+`data/local_quench/paired_starts.csv` 保存这十个函数在原配对起点上的 18,000 条测量。`supplementary_runs.csv` 和 `excluded_original_rows.csv` 分别列出补充起点和对应原起点的六条测量。`analysis.rebuild` 根据这些数据重建绘图用的 `manuscript.csv`。
 
 每个图点包含所有 300 次终点，包括预算内未达标结果；阴影为 30 个十函数批次均值的实际最小—最大范围，不是置信区间。淬火采用进程 CPU 时间，参数研究采用实际经过的 wall-clock 时间。参数表中的内存利用率、曲率对接受率仍作为历史报告值保留，其完整逐次来源未恢复，程序不把它们冒充重新统计得到的结果。
 

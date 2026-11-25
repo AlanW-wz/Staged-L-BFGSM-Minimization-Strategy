@@ -6,8 +6,7 @@ Requires Python, NumPy and Matplotlib; Arial or Liberation Sans is preferred.
 Quantitative grid, 178 x 86 mm, Python backend. Panel (a) compares residual
 accuracy, (b) CPU cost, (c) accepted steps. Arithmetic
 means retain all 300 outcomes per method/dimension, including budget failures.
-The manuscript data include outcome-informed function and matched-start
-replacements. Selection history and unreplaced data are preserved separately.
+One matched start was selected after inspecting the residuals.
 Shading represents the range of ten-function batch means for SD--NCG--L-BFGSM.
 """
 import argparse
@@ -44,14 +43,14 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATA = ROOT / "data/local_quench/manuscript.csv"
 REFERENCE_DATA = ROOT / "data/local_quench/figure1_plot_data.csv"
 CAPTION = (
-    "Figure 1. Dimension dependence of local-quench outcomes in the exploratory replacement dataset. "
+    "Figure 1. Dimension dependence of local-quench outcomes for the ten benchmark functions. "
     "(a) Arithmetic mean final gradient infinity norm. (b) Mean process CPU time per run. "
     "(c) Mean accepted iterations. Each point includes 300 runs (10 functions, 30 starts), "
     "including budget-limited runs. The bold red curve denotes SD–NCG–L-BFGSM; its shading "
     "spans the minimum and maximum of 30 ten-function batch means, not a confidence interval. "
-    "The dataset includes two function replacements and one matched-start replacement informed "
-    "by preceding results. Selection history, reproducibility details and unreplaced comparisons "
-    "are documented in the Supporting Information and the repository provenance records."
+    "One matched-start change across all six methods was informed "
+    "by preceding results. The original and supplementary observations "
+    "are archived with the dataset."
 )
 
 

@@ -28,16 +28,7 @@ FUNCTION_LABELS = {
     9: "Eight-coordinate corrugated Rosenbrock blocks",
     10: "Heterogeneous periodic double-well chain",
 }
-ROUND1_FUNCTION_LABELS = {
-    **FUNCTION_LABELS,
-    7: "Mixed/scaled Levy",
-    9: "Expanded Griewank--Rosenbrock",
-}
-
-# Public aliases used by the plotting and archival-verification entry points.
 METHOD_NAMES = METHOD_LABELS
-FUNCTION_NAMES_ROUND1 = ROUND1_FUNCTION_LABELS
-FUNCTION_NAMES_ROUND2 = FUNCTION_LABELS
 
 
 def method_id(value):

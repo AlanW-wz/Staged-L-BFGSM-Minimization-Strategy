@@ -32,8 +32,8 @@ for _variable in THREAD_VARS:
 
 import numpy as np
 
-from . import problems, original_problems, solvers
-from .names import METHOD_LABELS, METHOD_ALIASES, FUNCTION_LABELS, ROUND1_FUNCTION_LABELS, method_id
+from . import problems, solvers
+from .names import METHOD_LABELS, METHOD_ALIASES, FUNCTION_LABELS, method_id
 
 
 SOURCE_DIR = Path(__file__).resolve().parent
@@ -46,7 +46,6 @@ DIMENSIONS = tuple(range(1000, 10001, 1000))
 SEEDS = tuple(range(2026110701, 2026110731))
 FORMAL_SETTINGS = dict(max_iterations=2000, max_evaluations=20000, tol=1e-6)
 SOLVER_SETTINGS = FORMAL_SETTINGS.copy()
-SUITE = "round2"
 SMOKE = False
 KEY = ("fid", "d", "seed", "method")
 CSV_FIELDS = ("fid", "name", "d", "seed", "method", "final_grad_l2", "final_grad_inf",
@@ -57,22 +56,18 @@ SCHEMA = 2
 DB_NAME = "quench_results.sqlite3"
 
 
-def configure(suite="round2", dims=None, seeds=None, methods=None, smoke=False, functions=None):
-    """Set the workload; workers receive suite/settings explicitly on submission."""
-    global SUITE, SMOKE, DIMENSIONS, SEEDS, METHODS, SOLVER_SETTINGS, FIDS
-    if suite not in ("round1", "round2"):
-        raise ValueError("suite must be round1 or round2")
-    SUITE, SMOKE = suite, bool(smoke)
-    registry = original_problems if suite == "round1" else problems
-    labels = ROUND1_FUNCTION_LABELS if suite == "round1" else FUNCTION_LABELS
-    aliases = {str(fid): fid for fid in registry.IDS}
-    aliases.update({name.lower(): fid for fid, name in registry.NAMES.items()})
-    aliases.update({name.lower(): fid for fid, name in labels.items()})
+def configure(dims=None, seeds=None, methods=None, smoke=False, functions=None):
+    """Set the workload; workers receive settings explicitly on submission."""
+    global SMOKE, DIMENSIONS, SEEDS, METHODS, SOLVER_SETTINGS, FIDS
+    SMOKE = bool(smoke)
+    aliases = {str(fid): fid for fid in problems.IDS}
+    aliases.update({name.lower(): fid for fid, name in problems.NAMES.items()})
+    aliases.update({name.lower(): fid for fid, name in FUNCTION_LABELS.items()})
     try:
         FIDS = tuple(aliases[str(value).lower()] for value in
-                     (functions if functions is not None else registry.IDS))
+                     (functions if functions is not None else problems.IDS))
     except KeyError as exc:
-        raise ValueError(f"Unknown function {exc.args[0]!r} for {suite}") from exc
+        raise ValueError(f"Unknown function {exc.args[0]!r} in the quench study") from exc
     DIMENSIONS = tuple(dims if dims is not None else ((16, 32) if smoke else range(1000, 10001, 1000)))
     SEEDS = tuple(seeds if seeds is not None else ((914276,) if smoke else range(2026110701, 2026110731)))
     METHODS = tuple(method_id(m) for m in (methods if methods is not None else METHOD_LABELS))
@@ -139,15 +134,14 @@ def task_order(limit):
 
 
 def make_manifest(tasks, limit):
-    registry = original_problems if SUITE == "round1" else problems
     formal_grid = (DIMENSIONS == tuple(range(1000, 10001, 1000))
                    and SEEDS == tuple(range(2026110701, 2026110731))
-                   and METHODS == tuple(METHOD_LABELS) and FIDS == registry.IDS and not limit)
+                   and METHODS == tuple(METHOD_LABELS) and FIDS == problems.IDS and not limit)
     manifest = dict(schema=SCHEMA, design="single-quench/stratified-waves-v1",
-                    suite=SUITE, mode="smoke" if SMOKE else ("formal" if formal_grid else "subset"), limit=limit,
-                    target_runs=len(tasks), functions={fid: registry.NAMES[fid] for fid in FIDS},
+                    suite="local_quench", mode="smoke" if SMOKE else ("formal" if formal_grid else "subset"), limit=limit,
+                    target_runs=len(tasks), functions={fid: problems.NAMES[fid] for fid in FIDS},
                     function_ids=FIDS, dimensions=DIMENSIONS,
-                    function_labels={fid: (ROUND1_FUNCTION_LABELS if SUITE == "round1" else FUNCTION_LABELS)[fid] for fid in FIDS},
+                    function_labels={fid: FUNCTION_LABELS[fid] for fid in FIDS},
                     methods=METHODS, method_labels={m: METHOD_LABELS[m] for m in METHODS},
                     seeds=SEEDS, solver=SOLVER_SETTINGS,
                     initialization="numpy.default_rng(SeedSequence([seed, fid, d]))",
@@ -157,7 +151,7 @@ def make_manifest(tasks, limit):
                     machine=platform.machine(),
                     source_sha256={name: hashlib.sha256((SOURCE_DIR / name).read_bytes()).hexdigest()
                                    for name in NUMERICAL_FILES},
-                    provenance="New run of the portable package; historical source fingerprints are archived separately.")
+                    provenance="New run of the portable local-quench package.")
     manifest["fingerprint"] = hashlib.sha256(encoded(manifest)).hexdigest()
     return manifest
 
@@ -210,25 +204,21 @@ def open_checkpoint(folder, manifest):
         raise
 
 
-def run_one(task, suite="round2", solver_settings=None):
+def run_one(task, solver_settings=None):
     """Return one metrics dictionary and compressed trace bytes without file I/O."""
     fid, dimension, seed, method = task
-    if suite not in ("round1", "round2"):
-        raise ValueError("suite must be round1 or round2")
-    registry = original_problems if suite == "round1" else problems
-    labels = ROUND1_FUNCTION_LABELS if suite == "round1" else FUNCTION_LABELS
-    objective = registry.problem(fid, dimension)
-    x0 = registry.initial_point(fid, dimension, seed)
+    objective = problems.problem(fid, dimension)
+    x0 = problems.initial_point(fid, dimension, seed)
     x0_hash = hashlib.sha256(x0.tobytes()).hexdigest()
     begin_wall, begin_cpu = time.perf_counter(), time.process_time()
     result, trace = solvers.solve(objective.value_grad, x0, method,
                                  **(FORMAL_SETTINGS if solver_settings is None else solver_settings))
     cpu_seconds = time.process_time() - begin_cpu
     wall_seconds = time.perf_counter() - begin_wall
-    result.update(fid=fid, name=registry.NAMES[fid], d=dimension, seed=seed, method=method,
+    result.update(fid=fid, name=problems.NAMES[fid], d=dimension, seed=seed, method=method,
                   x0_sha256=x0_hash, fstar=float(objective.fstar), cpu_seconds=cpu_seconds,
-                  wall_seconds=wall_seconds, suite=suite,
-                  function_name=labels[fid], method_name=METHOD_LABELS[method])
+                  wall_seconds=wall_seconds, suite="local_quench",
+                  function_name=FUNCTION_LABELS[fid], method_name=METHOD_LABELS[method])
     if set(CSV_FIELDS).difference(result):
         raise ValueError(f"Solver result lacks {set(CSV_FIELDS).difference(result)}")
     if (len(trace["evals"]) != result["iterations"] + 1
@@ -358,7 +348,7 @@ def execute(folder, workers, limit):
                         task = next(remaining, None)
                         if task is None:
                             break
-                        pending[pool.submit(run_one, task, SUITE, SOLVER_SETTINGS)] = task
+                        pending[pool.submit(run_one, task, SOLVER_SETTINGS)] = task
 
                 try:
                     refill()
@@ -417,7 +407,6 @@ def read_progress(folder):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--suite", choices=("round1", "round2"), default="round2")
     parser.add_argument("--out", type=Path, help="Checkpoint directory under repository results/")
     parser.add_argument("--workers", type=int, default=min(8, os.cpu_count() or 1))
     parser.add_argument("--smoke", action="store_true", help="All functions/methods at dimensions 16/32, one diagnostic seed, 30 iterations")
@@ -433,7 +422,7 @@ def main(argv=None):
     if args.out is None and not args.plan_only:
         parser.error("--out is required for execution or progress inspection")
     try:
-        configure(args.suite, args.dims, args.seeds, args.methods, args.smoke, args.functions)
+        configure(args.dims, args.seeds, args.methods, args.smoke, args.functions)
         folder = output_path(args.out) if args.out else None
     except ValueError as exc:
         parser.error(str(exc))
